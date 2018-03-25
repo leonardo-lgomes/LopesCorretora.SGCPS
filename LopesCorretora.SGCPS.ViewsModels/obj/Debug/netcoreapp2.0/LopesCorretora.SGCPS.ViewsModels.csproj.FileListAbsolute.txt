@@ -9,3 +9,14 @@ c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.V
 c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.pdb
 c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.dll
 c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.pdb
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.deps.json
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.dll
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.pdb
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.dll
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.pdb
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.AssemblyInfoInputs.cache
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.AssemblyInfo.cs
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.dll
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.pdb

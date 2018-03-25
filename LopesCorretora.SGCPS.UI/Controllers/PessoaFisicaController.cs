@@ -81,8 +81,8 @@ namespace LopesCorretora.SGCPS.UI.Controllers
                 else
                 {
                     ViewBag.Mensagem = "Usuario nao encontrado!";
-                    ViewBag.msgStyle = "display:block; text-align:center; margin-top: 5%";
-                    ViewBag.msgClass = "alert alert-danger";
+                    ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
+                    ViewBag.Class = "alert alert-danger";
                     return View(alterarPessoaFisicaVM);
                 }
             }

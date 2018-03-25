@@ -1,0 +1,30 @@
+﻿@model LopesCorretora.SGCPS.ViewsModels.AlterarPessoaFisicaVM
+@{
+    ViewData["Title"] = "Alterar Pessoa Fisica";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <h1 class="h1Financeiro"> Financeiro </h1>
+        </div>
+    </div>
+    <div class="row" id="opcoesFinanceiro">
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <button type="button" class="btn btn-default" id="buttonOpcoes">Balanço Mensal</button>
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <button type="button" class="btn btn-default" id="buttonOpcoes">Balanço Anual</button>
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <button type="button" class="btn btn-default" id="buttonOpcoes">Despesas</button>
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <button type="button" class="btn btn-default" id="buttonOpcoes">Dar Baixa</button>
+        </div>
+    </div>
+</div>

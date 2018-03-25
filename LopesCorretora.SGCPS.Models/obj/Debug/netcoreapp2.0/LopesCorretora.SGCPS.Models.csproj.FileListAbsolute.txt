@@ -7,3 +7,12 @@ c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.M
 c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Models\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.pdb
 c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Models\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.dll
 c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Models\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.pdb
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Models\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.deps.json
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Models\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.dll
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Models\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.pdb
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Models\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Models\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Models\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.AssemblyInfoInputs.cache
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Models\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.AssemblyInfo.cs
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Models\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.dll
+\\Mac\Home\Desktop\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Models\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.pdb

@@ -12,7 +12,27 @@ namespace LopesCorretora.SGCPS.UI.Controllers
 {
     public class FinanceiroController : Controller
     {
-        public IActionResult Index()
+        public IActionResult BalancoAnual()
+        {
+            return View();
+        }
+
+        public IActionResult BalancoMensal()
+        {
+            return View();
+        }
+
+        public IActionResult ControleDespesas()
+        {
+            return View();
+        }
+
+        public IActionResult DarBaixa()
+        {
+            return View();
+        }
+
+        public IActionResult Financeiro()
         {
             return View();
         }
