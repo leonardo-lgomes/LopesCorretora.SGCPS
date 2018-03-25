@@ -35,7 +35,7 @@
     <None Include="Views\Financeiro\BalancoMensal.cshtml" />
     <None Include="Views\Financeiro\ControleDespesas.cshtml" />
     <None Include="Views\Financeiro\DarBaixa.cshtml" />
-    <None Include="Views\Home\home.cshtml" />
+    <None Include="Views\Home\Home.cshtml" />
     <None Include="Views\PessoaFisica\Cadastrar.cshtml" />
     <None Include="Views\PessoaJuridica\Cadastrar.cshtml" />
   </ItemGroup>

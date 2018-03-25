@@ -421,3 +421,37 @@ input.form-control, textarea#observacoes.form-control {
     float: right;
     margin-left: 5px;
 }
+
+/*
+    Pesquisar
+*/
+
+.buttonPesquisar {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 10px;
+    width: 175px;
+    height: 50px;
+}
+
+.CaixaBusca {
+    margin-left: 200px;
+}
+
+.sizeOfList {
+    width: 300px;
+    height: 50px;
+    margin-top: 10px;
+    padding: 12px 0;
+}
+
+li.sizeOfList a {
+    color: #000000;
+    text-decoration: none;
+}
+
+#btnVerTodos {
+    margin-left: 290px;
+    padding: 10px;
+}

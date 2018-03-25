@@ -1,0 +1,54 @@
+﻿@model LopesCorretora.SGCPS.ViewsModels.PesquisaClienteVM
+@{
+    ViewData["Title"] = "Alterar Pessoa Fisica";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section>
+    <div class="row ">
+        <div class="container">
+            <h1>Realizar Pesquisa</h1>
+            <hr class="shortHr">
+            <form asp-action="Search" asp-controller="Clients" method="get" class="row mt-5">
+                <div class="col-md-8 text-center">
+                    <p class="text-center"><input type="text" id="CaixaBusca" class="form-control CaixaBusca" name="q" placeholder="Pesquisar..." /></p>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p class="text-center"><button type="button" class="btn btn-default buttonPesquisar" id=""> Pesquisar </button></p>
+                    </div>
+                </div>
+            </form>
+
+
+            <h2>Resultados</h2>
+            <hr class="shortHr">
+            @if (Model.LisPessoaFisicaMOD != null)
+            {
+                @foreach (var client in Model.LisPessoaFisicaMOD)
+                {
+                    <div class="panel panel-default">
+                        <div class="panel-heading">@client.Titular</div>
+                        <div class="panel-body">
+                            <p>Observação: @client.Observacoes</p>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">Cpf/Cnpj: @client.CPF</li>
+                            <li class="list-group-item">Número do Contrato: @client.ObjPlanoPessoaFisicaMOD.NumeroContrato</li>
+                            <li class="list-group-item">
+                                <a href="" class="btn btn-large btn-default card-link">Dar Baixa</a>
+                                <a href="" class="btn btn-large btn-default card-link">Ver Mais</a>
+                            </li>
+                        </ul>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="col-md-12 alert alert-info">
+                    <p>Não há resultados para a sua busca.</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>
