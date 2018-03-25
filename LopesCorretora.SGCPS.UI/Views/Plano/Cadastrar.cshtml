@@ -1,0 +1,38 @@
+﻿@model LopesCorretora.SGCPS.Models.PlanoMOD
+
+@{
+    ViewData["Title"] = "Cadastrar Plano de Saude";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <h1> Adicionar Planos </h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5">
+            <div class="form-group">
+                @Html.LabelFor(planoMOD => planoMOD.Plano)
+                @Html.TextBoxFor(planoMOD => planoMOD.Plano, new { @class = "form-control", type = "text", id = "Plano", placeholder = "(Nome do plano.)" })
+                @Html.ValidationMessageFor(planoMOD => planoMOD.Plano, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="col-xs-4 col-sm-4 col-md-4">
+            <div class="form-group">
+                @Html.LabelFor(planoMOD => planoMOD.TelefoneDoPlano)
+                @Html.TextBoxFor(planoMOD => planoMOD.TelefoneDoPlano, new { @class = "form-control", type = "text", id = "TelefoneDoPlano", placeholder = "(Telefone do plano.)" })
+                @Html.ValidationMessageFor(planoMOD => planoMOD.TelefoneDoPlano, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3">
+            <button type="button" class="btn btn-default">Adicionar +</button>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\home.cshtml" />
+    <Content Remove="Views\PessoaFisica\Cadastrar.cshtml" />
+    <Content Remove="Views\PessoaFisica\PessoaJuridica.cshtml" />
+    <Content Remove="wwwroot\css\Page.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="wwwroot\css\Page.css">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Home\home.cshtml" />
+    <None Include="Views\PessoaFisica\Cadastrar.cshtml" />
+    <None Include="Views\PessoaJuridica\Cadastrar.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LopesCorretora.SGCPS.Business\LopesCorretora.SGCPS.Business.csproj" />
+    <ProjectReference Include="..\LopesCorretora.SGCPS.Models\LopesCorretora.SGCPS.Models.csproj" />
+    <ProjectReference Include="..\LopesCorretora.SGCPS.ViewsModels\LopesCorretora.SGCPS.ViewsModels.csproj" />
+  </ItemGroup>
+
+</Project>

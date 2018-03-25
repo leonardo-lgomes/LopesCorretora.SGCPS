@@ -1,0 +1,87 @@
+﻿/*troca de cores */
+body {
+    background-color: #eaedf0 !important;
+}
+
+    body > nav {
+        background-color: #103168 !important;
+        border-color: #aeaeae !important;
+    }
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+    color: #d2d4d6 !important;
+}
+
+
+div > div > div > label,
+body > div > div > div > h1,
+body > div > div > div > h2,
+body > div > div > div > h3 {
+    color: #103168;
+}
+
+input.form-control, textarea#observacoes.form-control {
+    border-color: #103168 !important;
+}
+
+.btn-default {
+    border-color: #103168 !important;
+    color: #103168 !important;
+}
+
+
+
+/*fim troca de cores*/
+
+
+
+
+
+
+
+
+
+
+
+body > nav {
+    background-color: #103168 !important;
+    border-color: #aeaeae !important;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+    color: #d2d4d6 !important;
+}
+
+
+body > div > div > div > h1 {
+    color: #103168;
+    text-align: center;
+}
+
+/*fim troca de cores*/
+
+body {
+    background-image: url("https://d26uhratvi024l.cloudfront.net/gsc/29P5RS/26/53/57/2653570371de4812b6ab5c3a2797e1e4/images/home/u1.jpg?token=5f1f89a36e1432ebe56d4485d5719612");
+    max-width: 100%;
+    height: auto;
+}
+
+
+#BtnGoogle {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 45px;
+    width: 175px;
+}
+
+.emptySpace {
+    height: 310px;
+}
+
+#linha {
+    width: 350px;
+}
+
+</style >
+

@@ -1,0 +1,11 @@
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.DataAccess\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.DataAccess.csprojResolveAssemblyReference.cache
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.DataAccess\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.DataAccess.csproj.CoreCompileInputs.cache
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.DataAccess\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.DataAccess.AssemblyInfoInputs.cache
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.DataAccess\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.DataAccess.AssemblyInfo.cs
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.DataAccess\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.DataAccess.deps.json
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.DataAccess\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.DataAccess.dll
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.DataAccess\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.DataAccess.pdb
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.DataAccess\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.DataAccess.dll
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.DataAccess\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.DataAccess.pdb
+C:\Users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.DataAccess\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.dll
+C:\Users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.DataAccess\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.pdb

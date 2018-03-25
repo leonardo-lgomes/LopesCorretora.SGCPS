@@ -1,0 +1,11 @@
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.csprojResolveAssemblyReference.cache
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.csproj.CoreCompileInputs.cache
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.AssemblyInfoInputs.cache
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.AssemblyInfo.cs
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.deps.json
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.dll
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.pdb
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.dll
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.pdb
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.dll
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.ViewsModels\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.pdb

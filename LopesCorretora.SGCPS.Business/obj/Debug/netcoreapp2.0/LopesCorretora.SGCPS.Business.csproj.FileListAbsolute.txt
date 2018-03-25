@@ -1,0 +1,15 @@
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Business\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Business.csproj.CoreCompileInputs.cache
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Business\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Business.AssemblyInfoInputs.cache
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Business\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Business.AssemblyInfo.cs
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Business\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Business.csprojResolveAssemblyReference.cache
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Business\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Business.deps.json
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Business\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Business.dll
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Business\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Business.pdb
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Business\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.dll
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Business\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.dll
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Business\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Models.pdb
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Business\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.ViewsModels.pdb
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Business\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Business.dll
+c:\users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Business\obj\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Business.pdb
+C:\Users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Business\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Repository.dll
+C:\Users\douglasmachado\source\repos\LopesCorretora.SGCPS\LopesCorretora.SGCPS.Business\bin\Debug\netcoreapp2.0\LopesCorretora.SGCPS.Repository.pdb
