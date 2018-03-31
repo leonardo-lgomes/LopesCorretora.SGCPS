@@ -33,6 +33,12 @@ namespace LopesCorretora.SGCPS.Models
 
         #region DataAnnotations
         [Required(ErrorMessage = "* Campo obrigatorio")]
+        [Display(Name = "E-mail", Description = "E-mail, pessoa fisica")]
+        #endregion
+        public string Email { get; set; }
+
+        #region DataAnnotations
+        [Required(ErrorMessage = "* Campo obrigatorio")]
         [Display(Name = "Endereco PJ", Description = "Titular, pessoa fisica")]
         #endregion
         public EnderecoMOD ObjEnderecoMOD { get; set; }
@@ -42,6 +48,8 @@ namespace LopesCorretora.SGCPS.Models
         [Display(Name = "Endereco de Entrega", Description = "Titular, pessoa fisica")]
         #endregion
         public EnderecoMOD ObjEnderecoEntregaMOD { get; set; }
+
+        public StatusMOD ObjStatusMOD { get; set; }
 
         public PessoaJuridicaMOD()
         {

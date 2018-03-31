@@ -63,9 +63,9 @@ namespace LopesCorretora.SGCPS.Models
             set { odontologia = Convert.ToBoolean(value); }
         }
 
-        public PlanoMOD ObjPlanoMOD { get; set; }
+        public string QualOdonto { get; set; }
 
-        public StatusMOD ObjStatusMOD { get; set; }
+        public PlanoMOD ObjPlanoMOD { get; set; }
 
         public UsuarioMOD ObjUsuarioMOD { get; set; }
 
@@ -74,7 +74,6 @@ namespace LopesCorretora.SGCPS.Models
         public PlanoPessoaJuridicaMOD()
         {
             ObjPlanoMOD = new PlanoMOD();
-            ObjStatusMOD = new StatusMOD();
             ObjUsuarioMOD = new UsuarioMOD();
             ObjPessoaJuridicaMOD = new PessoaJuridicaMOD();
         }

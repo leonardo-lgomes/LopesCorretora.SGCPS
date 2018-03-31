@@ -10,6 +10,10 @@ namespace LopesCorretora.SGCPS.ViewsModels
         public PessoaJuridicaMOD ObjPessoaJuridicaMOD { get; set; }
         public PlanoPessoaJuridicaMOD ObjPlanoPessoaJuridicaMOD { get; set; }
         public UsuarioMOD ObjUsuarioMOD { get; set; }
+        public List<ContatoPessoaJuridicaMOD> LisContatoPessoaJuridicaMOD { get; set; }
+        public List<PlanoMOD> LisPlanoMOD { get; set; }
+        public List<int> LisNumeroDeParcelas { get; set; }
+
 
     }
 }

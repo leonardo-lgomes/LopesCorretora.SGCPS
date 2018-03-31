@@ -1,14 +1,6 @@
 ﻿using LopesCorretora.SGCPS.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-//DataAccess possui o contexto da aplicacao, nada mais;
-
-//DataAccess nao tem acesso a nenhuma outra camada;
-
-//Quem tem acesso a DataAccess: apenas Repository;
 
 namespace LopesCorretora.SGCPS.Repository.DataAccess
 {
@@ -24,10 +16,25 @@ namespace LopesCorretora.SGCPS.Repository.DataAccess
         public DbSet<PessoaJuridicaMOD> PessoasJuridicas { get; set; }
         public DbSet<PlanoPessoaJuridicaMOD> PlanoPessoasJuridicas { get; set; }
         public DbSet<UsuarioMOD> Usuarios { get; set; }
+        public DbSet<ContatoPessoaJuridicaMOD> MyProperty { get; set; }
+
+        public SGCPSContext(DbContextOptions<SGCPSContext> options) : base(options)
+        {
+        }
+
+        public SGCPSContext()
+        {
+
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("");
+            optionsBuilder.UseSqlServer("Data Source=douglasmacha1f7;Initial Catalog=SGCPS;Integrated Security=True");
         }
     }
 }

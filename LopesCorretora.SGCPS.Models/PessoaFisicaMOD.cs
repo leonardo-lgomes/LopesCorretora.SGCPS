@@ -80,6 +80,7 @@ namespace LopesCorretora.SGCPS.Models
         public PlanoPessoaFisicaMOD ObjPlanoPessoaFisicaMOD { get; set; }
 
         public StatusMOD ObjStatusMOD { get; set; }
+
         public Sexo ObjSexo { get; set; }
 
         public PessoaFisicaMOD()

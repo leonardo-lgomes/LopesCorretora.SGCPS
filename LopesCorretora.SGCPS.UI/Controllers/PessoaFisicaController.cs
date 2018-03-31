@@ -16,7 +16,7 @@ namespace LopesCorretora.SGCPS.UI.Controllers
         [HttpGet]
         public IActionResult Cadastrar()
         {
-            CadastrarPessoaFisicaVM cadastrarPessoaFisicaVM = (CadastrarPessoaFisicaVM)PessoaFisicaBUS.CadastrarPessoaFisicaVM();
+            CadastrarPessoaFisicaVM cadastrarPessoaFisicaVM = PessoaFisicaBUS.CadastrarPessoaFisicaVM();
             if (cadastrarPessoaFisicaVM != null)
             {
                 return View(cadastrarPessoaFisicaVM);

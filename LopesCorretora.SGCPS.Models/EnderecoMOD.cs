@@ -47,6 +47,12 @@ namespace LopesCorretora.SGCPS.Models
 
         #region DataAnnotations
         [Required(ErrorMessage = "Campo obrigatorio")]
+        [Display(Name = "Ponto de Referencia", Description = "Ponto de Referencia do endereco. Pessoa fisica")]
+        #endregion
+        public string Referencia { get; set; }
+
+        #region DataAnnotations
+        [Required(ErrorMessage = "Campo obrigatorio")]
         [Display(Name ="CEP",Description = "CEP, pessoa fisica")]
         #endregion
         public int CEP { get; set; }

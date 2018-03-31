@@ -12,15 +12,65 @@ namespace LopesCorretora.SGCPS.UI.Controllers
 {
     public class PessoaJuridicaController : Controller
     {
+        [HttpGet]
         public IActionResult Cadastrar()
         {
+            try
+            {
+                CadastrarPessoaJuridicaVM cadastrarPessoaJuridicaVM = PessoaJuridicaBUS.CadastrarPessoaJuridicaVMGet();
+                if (cadastrarPessoaJuridicaVM != null)
+                {
+                    return View(PessoaJuridicaBUS.CadastrarPessoaJuridicaVMGet());
+                }
+            }
+            catch (Exception)
+            {
+                return View();
+            }
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Cadastrar(CadastrarPessoaJuridicaVM cadastrarPessoaJuridicaVM)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    ViewBag.Mensagem = "Pessoa Juridica cadastrada com sucesso!";
+                    ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
+                    ViewBag.Class = "alert alert-danger";
+                    return View(PessoaJuridicaBUS.CadastrarPessoaJuridicaVMPost(cadastrarPessoaJuridicaVM));
+                }
+                catch (Exception)
+                {
+                    ViewBag.Mensagem = "Erro, ao cadastrar pessoa juridica!";
+                    ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
+                    ViewBag.Class = "alert alert-danger";
+                    return View(PessoaJuridicaBUS.CadastrarPessoaJuridicaVMPost(cadastrarPessoaJuridicaVM));
+                }
+            }
+            else
+            {
+                ViewBag.Mensagem = "Campos obrigatorios nao preenchidos!";
+                ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
+                ViewBag.Class = "alert alert-danger";
+                return View(PessoaJuridicaBUS.CadastrarPessoaJuridicaVMPost(cadastrarPessoaJuridicaVM));
+            }
+        }
+
+        [HttpGet]
         public IActionResult Alterar()
         {
+
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Alterar(AlterarPessoaJuridicaVM alterarPessoaJuridicaVM)
+        {
+
+            return View();
+        }
     }
 }

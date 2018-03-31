@@ -23,517 +23,412 @@
         </div>
     </div>
 
-    <div class="row">
-         
-        <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
+    @Html.Partial("_Errors")
+    @using (Html.BeginForm("Cadastrar", "PessoaJuridica", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="row">
+
+            <div class="col-xs-3 col-sm-3 col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-xs-4 col-sm-4 col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.CPF)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.CPF, new { @class = "form-control", type = "text", id = "CPF", placeholder = "CPF." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.CPF, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-xs-5 col-sm-5 col-md-5">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Nome)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Nome", placeholder = "Nome." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Celular)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Celular, new { @class = "form-control", type = "text", id = "Celular", placeholder = "Celular." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Celular, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-xs-9 col-sm-9 col-md-9">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Email)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Email, new { @class = "form-control", type = "text", id = "Email", placeholder = "Email." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Email, "", new { @class = "text-danger" })
+                </div>
             </div>
         </div>
 
-        <div class="col-xs-4 col-sm-4 col-md-4">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.CPF)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.CPF, new { @class = "form-control", type = "text", id = "CPF", placeholder = "CPF." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.CPF, "", new { @class = "text-danger" })
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h3> 2 - Dados da Empresa Contratante </h3>
             </div>
         </div>
 
-        <div class="col-xs-5 col-sm-5 col-md-5">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Nome)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="nome-Corretor"> Nome do Corretor: </label>
-                <input type="text" name="nome-corretor" id="nome-corretor" class="form-control">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.RazaoSocial)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.RazaoSocial, new { @class = "form-control", type = "text", id = "RazaoSocial", placeholder = "RazaoSocial." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.RazaoSocial, "", new { @class = "text-danger" })
+                </div>
             </div>
         </div>
 
-    </div>
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.CNPJ)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.CNPJ, new { @class = "form-control", type = "text", id = "CNPJ", placeholder = "CNPJ." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.CNPJ, "", new { @class = "text-danger" })
+                </div>
+            </div>
 
-    <div class="row">
-
-        <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="celular"> Celular: </label>
-                <input type="text" name="celular" id="celular" class="form-control">
+            <div class="col-xs-8 col-sm-8 col-md-8">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.InscricaoEstadual)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.InscricaoEstadual, new { @class = "form-control", type = "text", id = "InscricaoEstadual", placeholder = "InscricaoEstadual." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.InscricaoEstadual, "", new { @class = "text-danger" })
+                </div>
             </div>
         </div>
 
-        <div class="col-xs-9 col-sm-9 col-md-9">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
 
-
-                <label for="email"> E-maiil: </label>
-                <input type="text" name="email" id="email" class="form-control">
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <h3> 2 - Dados da Empresa Contratante </h3>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="razao-social"> Razão social: </label>
-                <input type="text" name="razao-social" id="razao-social" class="form-control">
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-4 col-sm-4 col-md-4">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="cnpj"> CNPJ: </label>
-                <input type="text" name="cnpj" id="cnpj" class="form-control">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h3> 3 - Endereço Fiscal (CNPJ) </h3>
             </div>
         </div>
 
-        <div class="col-xs-8 col-sm-8 col-md-8">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="inscricao-estadual"> Inscrição estadual: </label>
-                <input type="text" name="inscricao-estadual" id="inscricao-estadual" class="form-control">
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.CEP)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.CEP, new { @class = "form-control", type = "text", id = "CEP", placeholder = "CEP." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.CEP, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
-    </div>
 
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <h3> 3 - Endereço Fiscal (CNPJ) </h3>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="CEP"> CEP: </label>
-                <input type="text" name="CEP" id="CEP" class="form-control">
+            <div class="col-xs-9 col-sm-9 col-md-9">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.Rua)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.Rua, new { @class = "form-control", type = "text", id = "Rua", placeholder = "Rua." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.Rua, "", new { @class = "text-danger" })
+                </div>
             </div>
         </div>
 
-        <div class="col-xs-9 col-sm-9 col-md-9">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="rua"> Rua: </label>
-                <input type="text" name="rua" id="rua" class="form-control">
+        <div class="row">
+            <div class="col-xs-2 col-sm-2 col-md-2">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.Numero)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.Numero, new { @class = "form-control", type = "text", id = "Numero", placeholder = "Numero." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.Numero, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-xs-2 col-sm-2 col-md-2">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="numero"> Número: </label>
-                <input type="text" name="numero" id="numero" class="form-control">
+            <div class="col-xs-4 col-sm-4 col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.Complemento)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.Complemento, new { @class = "form-control", type = "text", id = "Complemento", placeholder = "Complemento." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.Complemento, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="col-xs-4 col-sm-4 col-md-4">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="complemento"> Complemento: </label>
-                <input type="text" name="complemento" id="complemento" class="form-control">
+            <div class="col-xs-4 col-sm-4 col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.Bairro)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.Bairro, new { @class = "form-control", type = "text", id = "Bairro", placeholder = "Bairro." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.Bairro, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="col-xs-4 col-sm-4 col-md-4">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="bairro"> Bairro: </label>
-                <input type="text" name="bairro" id="bairro" class="form-control">
+            <div class="col-xs-2 col-sm-2 col-md-2">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.UF)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.UF, new { @class = "form-control", type = "text", id = "UF", placeholder = "UF." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.UF, "", new { @class = "text-danger" })
+                </div>
             </div>
         </div>
 
-        <div class="col-xs-2 col-sm-2 col-md-2">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="uf"> UF: </label>
-                <input type="text" name="uf" id="uf" class="form-control">
+        <div class="row">
+            <div class="col-xs-7 col-sm-7 col-md-7">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.Cidade)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.Cidade, new { @class = "form-control", type = "text", id = "Cidade", placeholder = "Cidade." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.Cidade, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-xs-7 col-sm-7 col-md-7">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="cidade"> Cidade: </label>
-                <input type="text" name="cidade" id="cidade" class="form-control">
+            <div class="col-xs-2 col-sm-2 col-md-2">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "DDD", placeholder = "remover." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="col-xs-2 col-sm-2 col-md-2">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="ddd"> DDD: </label>
-                <input type="text" name="ddd" id="ddd" class="form-control">
+            <div class="col-xs-3 col-sm-3 col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.LisContatoPessoaJuridicaMOD[0].Contato)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.LisContatoPessoaJuridicaMOD[0].Contato, new { @class = "form-control", type = "text", id = "Contato", placeholder = "Contato." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.LisContatoPessoaJuridicaMOD[0].Contato, "", new { @class = "text-danger" })
+                </div>
             </div>
         </div>
 
-        <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="telefone"> Telefone: </label>
-                <input type="text" name="telefone" id="telefone" class="form-control">
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <h3> 4 - Endereço Correspondência (Fatura e Carteirinhas) </h3>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="CEP"> CEP: </label>
-                <input type="text" name="CEP" id="CEP" class="form-control">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h3> 4 - Endereço Correspondência (Fatura e Carteirinhas) </h3>
             </div>
         </div>
 
-        <div class="col-xs-9 col-sm-9 col-md-9">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="rua"> Rua: </label>
-                <input type="text" name="rua" id="rua" class="form-control">
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.CEP)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.CEP, new { @class = "form-control", type = "text", id = "CEP", placeholder = "CEP." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.CEP, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-xs-2 col-sm-2 col-md-2">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="numero"> Número: </label>
-                <input type="text" name="numero" id="numero" class="form-control">
+            <div class="col-xs-9 col-sm-9 col-md-9">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.Rua)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.Rua, new { @class = "form-control", type = "text", id = "Rua", placeholder = "Rua." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.Rua, "", new { @class = "text-danger" })
+                </div>
             </div>
         </div>
 
-        <div class="col-xs-4 col-sm-4 col-md-4">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
+        <div class="row">
+            <div class="col-xs-2 col-sm-2 col-md-2">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.Numero)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.Numero, new { @class = "form-control", type = "text", id = "Numero", placeholder = "Numero." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.Numero, "", new { @class = "text-danger" })
+                </div>
+            </div>
 
-                <label for="complemento"> Complemento: </label>
-                <input type="text" name="complemento" id="complemento" class="form-control">
+            <div class="col-xs-4 col-sm-4 col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.Complemento)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.Complemento, new { @class = "form-control", type = "text", id = "Complemento", placeholder = "Complemento." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.Complemento, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-xs-4 col-sm-4 col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.Bairro)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.Bairro, new { @class = "form-control", type = "text", id = "Bairro", placeholder = "Bairro." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.Bairro, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-xs-2 col-sm-2 col-md-2">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.UF)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.UF, new { @class = "form-control", type = "text", id = "UF", placeholder = "UF." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.UF, "", new { @class = "text-danger" })
+                </div>
             </div>
         </div>
 
-        <div class="col-xs-4 col-sm-4 col-md-4">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
 
-                <label for="bairro"> Bairro: </label>
-                <input type="text" name="bairro" id="bairro" class="form-control">
+        <div class="row">
+            <div class="col-xs-7 col-sm-7 col-md-7">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.Cidade)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.Cidade, new { @class = "form-control", type = "text", id = "Cidade", placeholder = "Cidade." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoEntregaMOD.Cidade, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-xs-2 col-sm-2 col-md-2">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "Cidade")
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Cidade", placeholder = "remover." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-sm-3 col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.LisContatoPessoaJuridicaMOD[1].Contato)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.LisContatoPessoaJuridicaMOD[1].Contato, new { @class = "form-control", type = "text", id = "Contato", placeholder = "Contato." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.LisContatoPessoaJuridicaMOD[1].Contato, "", new { @class = "text-danger" })
+                </div>
             </div>
         </div>
 
-        <div class="col-xs-2 col-sm-2 col-md-2">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="uf"> UF: </label>
-                <input type="text" name="uf" id="uf" class="form-control">
-            </div>
-        </div>
-    </div>
-
-
-    <div class="row">
-        <div class="col-xs-7 col-sm-7 col-md-7">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="cidade"> Cidade: </label>
-                <input type="text" name="cidade" id="cidade" class="form-control">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.LisContatoPessoaJuridicaMOD[2].Contato)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.LisContatoPessoaJuridicaMOD[2].Contato, new { @class = "form-control", type = "text", id = "Contato", placeholder = "Contato." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.LisContatoPessoaJuridicaMOD[2].Contato, "", new { @class = "text-danger" })
+                </div>
             </div>
         </div>
 
-        <div class="col-xs-2 col-sm-2 col-md-2">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="ddd"> DDD: </label>
-                <input type="text" name="ddd" id="ddd" class="form-control">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.Referencia)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.Referencia, new { @class = "form-control", type = "text", id = "Referencia", placeholder = "Referencia." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjEnderecoMOD.Referencia, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.Email)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.Email, new { @class = "form-control", type = "text", id = "Email", placeholder = "Email." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.Email, "", new { @class = "text-danger" })
+                </div>
             </div>
         </div>
 
-        <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="telefone"> Telefone: </label>
-                <input type="text" name="telefone" id="telefone" class="form-control">
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="contato-empresa"> Contato da empresa: </label>
-                <input type="text" name="contato-empresa" id="contato-empresa" class="form-control">
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-6">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="ponto-referencia"> Ponto referencia: </label>
-                <input type="text" name="ponto-referencia" id="ponto-referencia" class="form-control">
-            </div>
-        </div>
-        <div class="col-xs-6 col-sm-6 col-md-6">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="contato-empresa"> E-mail: </label>
-                <input type="text" name="e-mail" id="e-mail" class="form-control">
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <h3> 5 - Número de Beneficiários por Plano </h3>
-        </div>
-    </div>
-
-
-    <div class="row">
-        <div class="col-xs-4 col-sm-4 col-md-4">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="numero-de-beneficiarios"> Número de Beneficiários: </label>
-                <input type="text" name="numero-de-beneficiarios" id="numero-de-beneficiarios" class="form-control">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h3> 5 - Número de Beneficiários por Plano </h3>
             </div>
         </div>
 
-        <div class="col-xs-6 col-sm-6 col-md-6">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
 
-                <label for="plano"> Plano: </label>
-                <input type="text" name="plano" id="plano" class="form-control">
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.NumeroDoBeneficiarios)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.NumeroDoBeneficiarios, new { @class = "form-control", type = "text", id = "NumeroDoBeneficiarios", placeholder = "NumeroDoBeneficiarios." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.NumeroDoBeneficiarios, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.IdPlanoPessoaFisica)
+                    @Html.DropDownListFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.IdPlanoPessoaFisica, new SelectList((System.Collections.IEnumerable)Model.LisPlanoMOD, "[nome da propriedade do objeto que sera o value do comboBox]", "[nome da propriedade do objeto que sera o texto do comboBox]"), "Selecione", new { @class = "form-control", id = "IdPlanoPessoaFisica", size = "1", @*selected = ""*@})
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.IdPlanoPessoaFisica, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-xs-2 col-sm-2 col-md-2">
+                <button type="button" class="btn btn-default" id="addMais">Adicionar Mais</button>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h3> 6 - Modalidade (Fator Moderador) </h3>
             </div>
         </div>
 
-        <div class="col-xs-2 col-sm-2 col-md-2">
-            <button type="button" class="btn btn-default" id="addMais">Adicionar Mais</button>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Participacao, new { @class = "radio-inline" })
+                @Html.RadioButtonFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Participacao, new { @class = "radio-inline", value = "true" })
+                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Participacao, new { @class = "radio-inline" })
+                @Html.RadioButtonFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Participacao, new { @class = "radio-inline", value = "true" })
+                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Participacao, "", new { @class = "text-danger" })
+            </div>
         </div>
 
-    </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h3> 7 - Contratação Assistência Odontóligca</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Odontologia, new { @class = "radio-inline" })
+                @Html.RadioButtonFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Odontologia, new { @class = "radio-inline", value = "true" })
+                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Odontologia, new { @class = "radio-inline" })
+                @Html.RadioButtonFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Odontologia, new { @class = "radio-inline", value = "true" })
+                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Odontologia, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.QualOdonto)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.QualOdonto, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.QualOdonto, "", new { @class = "text-danger" })
+                    <hr />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjStatusMOD.IdStatus)
+                    @Html.DropDownListFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjStatusMOD.IdStatus, new SelectList((System.Collections.IEnumerable)Model.LisPlanoMOD, "[nome da propriedade do objeto que sera o value do comboBox]", "[nome da propriedade do objeto que sera o texto do comboBox]"), "Selecione", new { @class = "form-control", id = "Plano", size = "1", @*selected = ""*@})
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.ObjStatusMOD.IdStatus, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.NumeroContrato)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.NumeroContrato, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.NumeroContrato, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.ValorDeEntrada)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.ValorDeEntrada, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.ValorDeEntrada, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.NumeroDeParcelas)
+                    @Html.DropDownListFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.NumeroDeParcelas, new SelectList((System.Collections.IEnumerable)Model.LisNumeroDeParcelas, "[nome da propriedade do objeto que sera o value do comboBox]", "[nome da propriedade do objeto que sera o texto do comboBox]"), "Selecione", new { @class = "form-control", id = "NumeroDeParcelas", size = "1", @*selected = ""*@})
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.NumeroDeParcelas, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Observacoes)
+                    @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Observacoes, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Observacoes, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
 
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
-            <h3> 6 - Modalidade (Fator Moderador) </h3>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Participacao, new { @class = "radio-inline" })
-            @Html.RadioButtonFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Participacao, new { @class = "radio-inline", name = "assistencia", value = "true" })
-            @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Participacao, new { @class = "radio-inline" })
-            @Html.RadioButtonFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Participacao, new { @class = "radio-inline", name = "assistencia", value = "true" })
-            @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Participacao, "", new { @class = "text-danger" })
-
-            @*<label class="radio-inline" id="sem"><input class="radio-inline" name="participacao" type="radio" value="sem-participacao">Sem Participação</label>
-            <label class="radio-inline" id="com"><input class="radio-inline" name="participacao" type="radio" value="com-participacao">Com Participação</label>*@
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <h3> 7 - Contratação Assistência Odontóligca</h3>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Odontologia, new { @class = "radio-inline" })
-            @Html.RadioButtonFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Odontologia, new { @class = "radio-inline", name = "assistencia", value = "true" })
-            @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Odontologia, new { @class = "radio-inline" })
-            @Html.RadioButtonFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Odontologia, new { @class = "radio-inline", name = "assistencia", value = "true" })
-            @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Odontologia, "", new { @class = "text-danger" })
-            @*<label class="radio-inline" id="sim"><input type="radio" class="radio-inline" name="assistencia" value="sim">Sim</label>
-            <label class="radio-inline" id="nao"><input type="radio" class="radio-inline" name="assistencia" value="nao">Não</label>*@
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="qual"> Qual? </label>
-                <input type="text" name="qual" id="qual" class="form-control">
-                <hr />
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="StatusCliente"> Status do Cliente: </label>
-                <input type="text" name="StatusCliente" id="StatusCliente" class="form-control">
-            </div>
-        </div>
-        <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="NumeroContrato"> Número de Contrato: </label>
-                <input type="text" name="NumeroContrato" id="NumeroContrato" class="form-control">
-            </div>
-        </div>
-        <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="ValorDaEntrada"> Valor da Entrada: </label>
-                <input type="text" name="ValorDaEntrada" id="ValorDaEntrada" class="form-control">
-            </div>
-        </div>
-        <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="form-group">
-                <label for="NúmeroDeParcelas"> Número De Parcelas: </label>
-                <input type="text" name="NúmeroDeParcelas" id="NúmeroDeParcelas" class="form-control">
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario)
-                @Html.TextBoxFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, new { @class = "form-control", type = "text", id = "Concessionario", placeholder = "Concessionario." })
-                @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjUsuarioMOD.Concessionario, "", new { @class = "text-danger" })
-
-                <label for="observacoes">Observações:</label>
-                <textarea class="form-control" rows="5" id="observacoes"></textarea>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12" ">
             <div class="input-group">
-                <input type="file" class="filestyle" data-buttonText="Anexar Arquivo"></span>
+                <span><input type="file" class="filestyle" data-buttonText="Anexar Arquivo"></span>
             </div>
         </div><!-- /.col-lg-12 -->
     </div>
-    </br>
+    <br />
     <div id="actions" class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
-            <button type="button" class="btn btn-default" id="salvar">Salvar</button>
+            <button type="submit" class="btn btn-default" id="salvar">Salvar</button>
         </div>
     </div>
-
+    }
 </div>

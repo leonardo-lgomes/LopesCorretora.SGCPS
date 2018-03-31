@@ -15,7 +15,7 @@ namespace LopesCorretora.SGCPS.Business
         {
             try
             {
-                CadastrarPessoaFisicaVM cadastrarPessoaFisicaVM = new CadastrarPessoaFisicaVM()
+                return new CadastrarPessoaFisicaVM()
                 {
                     ObjPessoaFisicaMOD = new PessoaFisicaMOD(),
                     LisPlanosMOD = new List<PlanoMOD>(),
@@ -24,7 +24,6 @@ namespace LopesCorretora.SGCPS.Business
                     LisNumeroDeParcelas = new List<string>(),
                     LisEstadoCivil = new List<string>(),
                 };
-                return cadastrarPessoaFisicaVM;
             }
             catch (Exception)
             {
@@ -50,10 +49,13 @@ namespace LopesCorretora.SGCPS.Business
         {
             foreach (var contato in cadastrarPessoaFisicaVM.LisContatoPessoaFisicaMOD)
             {
-                if (!contato.Contato.ToString().Equals(""))
+                if (contato.Contato != null)
                 {
-                    contato.ObjPessoaFisicaMOD = cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD;
-                    ContatoPessoaFisicaRPO.Cadastrar(contato);
+                    if (!contato.Contato.ToString().Trim().Equals(""))
+                    {
+                        contato.ObjPessoaFisicaMOD = cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD;
+                        ContatoPessoaFisicaRPO.Cadastrar(contato);
+                    }
                 }
             }
         }

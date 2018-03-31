@@ -13,6 +13,12 @@ namespace LopesCorretora.SGCPS.UI.Controllers
     public class FinanceiroController : Controller
     {
         [HttpGet]
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpGet]
         public IActionResult BalancoAnual()
         {
             return View();
@@ -32,12 +38,6 @@ namespace LopesCorretora.SGCPS.UI.Controllers
 
         [HttpGet]
         public IActionResult DarBaixa()
-        {
-            return View();
-        }
-
-        [HttpGet]
-        public IActionResult Financeiro()
         {
             return View();
         }
