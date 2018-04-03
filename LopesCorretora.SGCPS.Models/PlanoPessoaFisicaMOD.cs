@@ -7,7 +7,10 @@ namespace LopesCorretora.SGCPS.Models
 {
     public class PlanoPessoaFisicaMOD
     {
-        public int IdPlanoPessoaFisica { get; set; }
+        #region DataAnnotation
+        [Key]
+        #endregion
+        public int Id { get; set; }
 
         #region DataAnotations
         [Required(ErrorMessage = "Campo obrigatorio")]
@@ -33,6 +36,6 @@ namespace LopesCorretora.SGCPS.Models
         #endregion
         public int NumeroDeParcelas { get; set; }
 
-        public PlanoMOD ObjPlanoMOD { get; set; }
+        public PlanoMOD Plano { get; set; }
     }
 }

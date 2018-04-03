@@ -15,7 +15,7 @@ namespace LopesCorretora.SGCPS.Repository
             {
                 using (SGCPSContext context = new SGCPSContext())
                 {
-                    PessoaFisicaMOD ObjPessoaFisicaMOD = context.PessoasFisicas.Where(x => x.IdPessoaFisica == pessoaFisicaMOD.IdPessoaFisica).First();
+                    PessoaFisicaMOD ObjPessoaFisicaMOD = context.PessoasFisicas.Where(x => x.Id == pessoaFisicaMOD.Id).First();
                     ObjPessoaFisicaMOD = pessoaFisicaMOD;
                     context.SaveChanges();
                 }
@@ -49,7 +49,7 @@ namespace LopesCorretora.SGCPS.Repository
             {
                 using (SGCPSContext context = new SGCPSContext())
                 {
-                    return context.PessoasFisicas.Where(x => x.IdPessoaFisica == Id).First();
+                    return context.PessoasFisicas.Where(x => x.Id == Id).First();
                 }
             }
             catch (Exception)

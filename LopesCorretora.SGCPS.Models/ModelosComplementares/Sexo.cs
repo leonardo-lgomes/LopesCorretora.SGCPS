@@ -7,7 +7,12 @@ namespace LopesCorretora.SGCPS.Models.ModelosComplementares
 {
     public class Sexo
     {
-        private bool sexo;
+        [Key]
+        public int IdSexo { get; set; }
+
+
+        [Required]
+        public bool sexo;
 
         #region DataAnnotations
         [Required(ErrorMessage = "Campo obrigatorio")]

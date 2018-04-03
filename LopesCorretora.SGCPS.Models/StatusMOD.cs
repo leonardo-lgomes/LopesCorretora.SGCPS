@@ -7,8 +7,11 @@ namespace LopesCorretora.SGCPS.Models
 {
     public class StatusMOD
     {
+        #region DataAnnotations
+        [Key]
         [Required(ErrorMessage ="* Campo obrigatorio")]
-        public int IdStatus { get; set; }
+        #endregion
+        public int Id { get; set; }
         public string Status { get; set; }
     }
 }

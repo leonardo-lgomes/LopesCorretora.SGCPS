@@ -36,7 +36,7 @@ namespace LopesCorretora.SGCPS.Repository
                     context.SaveChanges();
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
                 throw;

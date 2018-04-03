@@ -1,0 +1,12 @@
+﻿<!-- O Model é uma lista de objetos do tipo web.ViewComponents.MainMenu.MenuItem -->
+@using LopesCorretora.SGCPS.UI.Views.ViewComponents
+@model IEnumerable<MainMenu.MenuItem>
+<aside class="col-lg-4">
+    <ul>
+        <li class="sizeOfList btn btn-default">@Html.ActionLink("Realizar Pesquisa", "Pesquisa", "Cliente")</li>
+        <li class="sizeOfList btn btn-default">@Html.ActionLink("Realizar Cotação", "", "")</li>
+        <li class="sizeOfList btn btn-default">@Html.ActionLink("Realizar Agendamento", "", "")</li>
+        <li class="sizeOfList btn btn-default">@Html.ActionLink("Planos", "", "")</li>
+        <li class="sizeOfList btn btn-default">@Html.ActionLink("Financeiro", "", "")</li>
+    </ul>
+</aside>

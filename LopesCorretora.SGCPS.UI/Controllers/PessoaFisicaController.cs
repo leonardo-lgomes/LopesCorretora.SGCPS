@@ -104,11 +104,11 @@ namespace LopesCorretora.SGCPS.UI.Controllers
                 ViewBag.Mensagem = "Pessoa fisica alterada com sucesso!";
                 ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
                 ViewBag.Class = "alert alert-success";
-                return View(PessoaFisicaBUS.AlterarPessoaFisicaVM(ObjAlterarPessoaFisicaVM.ObjPessoaFisicaMOD.IdPessoaFisica));
+                return View(PessoaFisicaBUS.AlterarPessoaFisicaVM(ObjAlterarPessoaFisicaVM.ObjPessoaFisicaMOD.Id));
             }
             else
             {
-                AlterarPessoaFisicaVM alterarPessoaFisicaVM = PessoaFisicaBUS.AlterarPessoaFisicaVM(ObjAlterarPessoaFisicaVM.ObjPessoaFisicaMOD.IdPessoaFisica);
+                AlterarPessoaFisicaVM alterarPessoaFisicaVM = PessoaFisicaBUS.AlterarPessoaFisicaVM(ObjAlterarPessoaFisicaVM.ObjPessoaFisicaMOD.Id);
                 alterarPessoaFisicaVM.ObjPessoaFisicaMOD = alterarPessoaFisicaVM.ObjPessoaFisicaMOD;
                 ViewBag.Mensagem = "Pessoa fisica alterada com sucesso!";
                 ViewBag.Style = "display:block; text-align:center; margin-top: 5%";

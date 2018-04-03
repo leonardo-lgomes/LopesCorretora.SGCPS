@@ -53,7 +53,7 @@ namespace LopesCorretora.SGCPS.Business
                 {
                     if (!contato.Contato.ToString().Trim().Equals(""))
                     {
-                        contato.ObjPessoaFisicaMOD = cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD;
+                        contato.PessoaFisica = cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD;
                         ContatoPessoaFisicaRPO.Cadastrar(contato);
                     }
                 }
@@ -66,7 +66,7 @@ namespace LopesCorretora.SGCPS.Business
             {
                 if (dependente != null && cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD != null)
                 {
-                    dependente.ObjPessoaFisicaMOD = cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD;
+                    dependente.PessoaFisica = cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD;
                     DependentePessoaFisicaRPO.Cadastrar(dependente);
                 }
             }

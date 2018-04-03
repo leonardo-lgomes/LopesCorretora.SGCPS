@@ -7,7 +7,10 @@ namespace LopesCorretora.SGCPS.Models
 {
     public class ContatoPessoaFisicaMOD
     {
-        public int IdContatoPessoaFisicaMOD { get; set; }
+        #region DataAnnotation
+        [Key]
+        #endregion
+        public int Id { get; set; }
 
         #region DataAnnotations
         [MinLength(10)]
@@ -17,11 +20,11 @@ namespace LopesCorretora.SGCPS.Models
         #endregion
         public string Contato { get; set; }
 
-        public PessoaFisicaMOD ObjPessoaFisicaMOD { get; set; }
+        public PessoaFisicaMOD PessoaFisica { get; set; }
 
         public ContatoPessoaFisicaMOD(PessoaFisicaMOD pessoaFisicaMOD)
         {
-            ObjPessoaFisicaMOD = pessoaFisicaMOD;
+            PessoaFisica = pessoaFisicaMOD;
         }
 
         public ContatoPessoaFisicaMOD()

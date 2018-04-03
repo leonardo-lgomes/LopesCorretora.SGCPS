@@ -1,19 +1,13 @@
-﻿@using LopesCorretora.SGCPS.UI.Views.ViewComponents
-@{
+﻿@{
     ViewData["Title"] = "Dashboard";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@*@section NavBarItems {
-}
-
-IgnoreSection("NavBarItems")*@
-    @await Component.InvokeAsync(nameof(SearchBar))
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             <div class="row">
-                @await Component.InvokeAsync(nameof(MainMenu))
+                @Html.Partial("_PartialMainMenu")
                 @*@await Component.InvokeAsync(nameof(DayAppointments))*@
             </div>
         </div>

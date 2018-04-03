@@ -8,10 +8,11 @@ namespace LopesCorretora.SGCPS.Models
     public class UsuarioMOD
     {
         #region DataAnnotations
+        [Key]
         [Required(ErrorMessage = "* Campo obrigatorio")]
         [Display(Name = "ID Usuario", Description = "ID, usuario")]
         #endregion
-        public int IdUsuario { get; set; }
+        public int Id { get; set; }
 
         #region DataAnnotations
         [Required(ErrorMessage = "* Campo obrigatorio")]

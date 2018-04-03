@@ -8,10 +8,11 @@ namespace LopesCorretora.SGCPS.Models
     public class PessoaJuridicaMOD
     {
         #region DataAnnotations
+        [Key]
         [Required(ErrorMessage = "* Campo obrigatorio")]
         [Display(Name = "ID Pessoa Juridica", Description = "Titular, pessoa fisica")]
         #endregion
-        public int IdPessoaJuridica { get; set; }
+        public int Id { get; set; }
 
         #region DataAnnotations
         [Required(ErrorMessage = "* Campo obrigatorio")]
@@ -41,20 +42,20 @@ namespace LopesCorretora.SGCPS.Models
         [Required(ErrorMessage = "* Campo obrigatorio")]
         [Display(Name = "Endereco PJ", Description = "Titular, pessoa fisica")]
         #endregion
-        public EnderecoMOD ObjEnderecoMOD { get; set; }
+        public EnderecoMOD Endereco { get; set; }
 
         #region DataAnnotations
         [Required(ErrorMessage = "* Campo obrigatorio")]
         [Display(Name = "Endereco de Entrega", Description = "Titular, pessoa fisica")]
         #endregion
-        public EnderecoMOD ObjEnderecoEntregaMOD { get; set; }
+        public EnderecoMOD EnderecoEntrega { get; set; }
 
-        public StatusMOD ObjStatusMOD { get; set; }
+        public StatusMOD Status { get; set; }
 
         public PessoaJuridicaMOD()
         {
-            ObjEnderecoEntregaMOD = new EnderecoMOD();
-            ObjEnderecoMOD = new EnderecoMOD();
+            EnderecoEntrega = new EnderecoMOD();
+            Endereco = new EnderecoMOD();
         }
     }
 }

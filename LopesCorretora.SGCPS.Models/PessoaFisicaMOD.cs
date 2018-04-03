@@ -8,7 +8,10 @@ namespace LopesCorretora.SGCPS.Models
 {
     public class PessoaFisicaMOD
     {
-        public int IdPessoaFisica { get; set; }
+        #region DataAnnotation
+        [Key]
+        #endregion
+        public int Id { get; set; }
 
         #region DataAnnotations
         [Required(ErrorMessage = "Campo obrigatorio")]
@@ -75,20 +78,20 @@ namespace LopesCorretora.SGCPS.Models
         #endregion
         public DateTime DataDeNascimento { get; set; }
 
-        public EnderecoMOD ObjEnderecoMOD { get; set; }
+        public EnderecoMOD Endereco { get; set; }
 
-        public PlanoPessoaFisicaMOD ObjPlanoPessoaFisicaMOD { get; set; }
+        public PlanoPessoaFisicaMOD PlanoPessoaFisica { get; set; }
 
-        public StatusMOD ObjStatusMOD { get; set; }
+        public StatusMOD Status { get; set; }
 
-        public Sexo ObjSexo { get; set; }
+        public Sexo Sexo { get; set; }
 
         public PessoaFisicaMOD()
         {
-            ObjEnderecoMOD = new EnderecoMOD();
-            ObjPlanoPessoaFisicaMOD = new PlanoPessoaFisicaMOD();
-            ObjStatusMOD = new StatusMOD();
-            ObjSexo = new Sexo();
+            Endereco = new EnderecoMOD();
+            PlanoPessoaFisica = new PlanoPessoaFisicaMOD();
+            Status = new StatusMOD();
+            Sexo = new Sexo();
         }
 
     }

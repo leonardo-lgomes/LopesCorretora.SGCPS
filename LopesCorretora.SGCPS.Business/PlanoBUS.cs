@@ -9,5 +9,17 @@ namespace LopesCorretora.SGCPS.Business
 {
     public class PlanoBUS
     {
+        public static PlanoMOD CadastrarPlano(PlanoMOD planoMOD)
+        {
+            try
+            {
+                PlanoRPO.Cadastrar(planoMOD);
+                return planoMOD;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

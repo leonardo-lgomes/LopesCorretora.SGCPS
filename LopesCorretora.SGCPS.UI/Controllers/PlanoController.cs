@@ -18,14 +18,37 @@ namespace LopesCorretora.SGCPS.UI.Controllers
         [HttpGet]
         public IActionResult Cadastrar()
         {
-            return View();
+            return View(new PlanoMOD());
         }
 
         [HttpPost]
         public IActionResult Cadastrar(PlanoMOD planoMOD)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    PlanoBUS.CadastrarPlano(planoMOD);
+                    ViewBag.Mensagem = "Plano cadastrado com sucesso!";
+                    ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
+                    ViewBag.Class = "alert alert-success";
+                    return View(planoMOD);
+                }
+                catch (Exception)
+                {
+                    ViewBag.Mensagem = "Erro ao cadastrar plano!";
+                    ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
+                    ViewBag.Class = "alert alert-danger";
+                    return View(planoMOD);
+                }
+            }
+            else
+            {
+                ViewBag.Mensagem = "Preenchimento invalido!";
+                ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
+                ViewBag.Class = "alert alert-danger";
+                return View(planoMOD);
+            }
         }
-
     }
 }

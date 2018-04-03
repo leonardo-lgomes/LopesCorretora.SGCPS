@@ -7,6 +7,11 @@ namespace LopesCorretora.SGCPS.Models
 {
     public class DependentePessoaFisicaMOD
     {
+        #region DataAnnotation
+        [Key]
+        #endregion
+        public int Id { get; set; }
+
         #region DataAnnotations
         [Required(ErrorMessage ="Campo obrigatorio")]
         [Display(Name ="Nome", Description ="Nome do dependente, pessoa fisica")]
@@ -53,11 +58,11 @@ namespace LopesCorretora.SGCPS.Models
         #endregion
         public string NumeroDoSUS { get; set; }
 
-        public PessoaFisicaMOD ObjPessoaFisicaMOD { get; set; }
+        public PessoaFisicaMOD PessoaFisica { get; set; }
 
         public DependentePessoaFisicaMOD(PessoaFisicaMOD pessoaFisicaMOD)
         {
-            ObjPessoaFisicaMOD = pessoaFisicaMOD;
+            PessoaFisica = pessoaFisicaMOD;
         }
 
         public DependentePessoaFisicaMOD()

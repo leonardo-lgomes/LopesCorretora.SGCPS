@@ -8,7 +8,10 @@ namespace LopesCorretora.SGCPS.Models
 {
     public class PlanoMOD
     {
-        public int IdPlano { get; set; }
+        #region DataAnnotation
+        [Key]
+        #endregion
+        public int Id { get; set; }
         
         #region DataAnnotations
         [Required(ErrorMessage = "Campo obrigatorio")]

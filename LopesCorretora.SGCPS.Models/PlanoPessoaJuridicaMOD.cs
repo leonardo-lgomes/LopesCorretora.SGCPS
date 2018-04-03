@@ -8,10 +8,11 @@ namespace LopesCorretora.SGCPS.Models
     public class PlanoPessoaJuridicaMOD
     {
         #region DataAnnotations
+        [Key]
         [Required(ErrorMessage = "* Campo obrigatorio")]
         [Display(Name = "ID Plano Pessoa Juridica", Description = "ID Plano, pessoa juridica")]
         #endregion
-        public int IdPlanoPessoaFisica { get; set; }
+        public int Id { get; set; }
 
         private bool participacao;
 
@@ -65,17 +66,17 @@ namespace LopesCorretora.SGCPS.Models
 
         public string QualOdonto { get; set; }
 
-        public PlanoMOD ObjPlanoMOD { get; set; }
+        public PlanoMOD Plano { get; set; }
 
-        public UsuarioMOD ObjUsuarioMOD { get; set; }
+        public UsuarioMOD Usuario { get; set; }
 
-        public PessoaJuridicaMOD ObjPessoaJuridicaMOD { get; set; }
+        public PessoaJuridicaMOD PessoaJuridica { get; set; }
 
         public PlanoPessoaJuridicaMOD()
         {
-            ObjPlanoMOD = new PlanoMOD();
-            ObjUsuarioMOD = new UsuarioMOD();
-            ObjPessoaJuridicaMOD = new PessoaJuridicaMOD();
+            Plano = new PlanoMOD();
+            Usuario = new UsuarioMOD();
+            PessoaJuridica = new PessoaJuridicaMOD();
         }
     }
 }
