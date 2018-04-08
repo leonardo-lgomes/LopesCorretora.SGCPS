@@ -321,9 +321,9 @@
 
             <div class="col-xs-6 col-sm-6 col-md-6">
                 <div class="form-group">
-                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.IdPlanoPessoaFisica)
-                    @Html.DropDownListFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.IdPlanoPessoaFisica, new SelectList((System.Collections.IEnumerable)Model.LisPlanoMOD, "[nome da propriedade do objeto que sera o value do comboBox]", "[nome da propriedade do objeto que sera o texto do comboBox]"), "Selecione", new { @class = "form-control", id = "IdPlanoPessoaFisica", size = "1", @*selected = ""*@})
-                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.IdPlanoPessoaFisica, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Id)
+                    @Html.DropDownListFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Id, new SelectList((System.Collections.IEnumerable)Model.LisPlanoMOD, "[nome da propriedade do objeto que sera o value do comboBox]", "[nome da propriedade do objeto que sera o texto do comboBox]"), "Selecione", new { @class = "form-control", id = "IdPlanoPessoaFisica", size = "1", @*selected = ""*@})
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPlanoPessoaJuridicaMOD.Id, "", new { @class = "text-danger" })
                 </div>
             </div>
 
@@ -379,9 +379,9 @@
         <div class="row">
             <div class="col-xs-3 col-sm-3 col-md-3">
                 <div class="form-group">
-                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.Status.IdStatus)
-                    @Html.DropDownListFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.Status.IdStatus, new SelectList((System.Collections.IEnumerable)Model.LisPlanoMOD, "[nome da propriedade do objeto que sera o value do comboBox]", "[nome da propriedade do objeto que sera o texto do comboBox]"), "Selecione", new { @class = "form-control", id = "Plano", size = "1", @*selected = ""*@})
-                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.Status.IdStatus, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.Status.Id)
+                    @Html.DropDownListFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.Status.Id, new SelectList((System.Collections.IEnumerable)Model.LisPlanoMOD, "[nome da propriedade do objeto que sera o value do comboBox]", "[nome da propriedade do objeto que sera o texto do comboBox]"), "Selecione", new { @class = "form-control", id = "Plano", size = "1", @*selected = ""*@})
+                    @Html.ValidationMessageFor(cadastrarPessoaJurudicaVM => cadastrarPessoaJurudicaVM.ObjPessoaJuridicaMOD.Status.Id, "", new { @class = "text-danger" })
                 </div>
             </div>
             <div class="col-xs-3 col-sm-3 col-md-3">
