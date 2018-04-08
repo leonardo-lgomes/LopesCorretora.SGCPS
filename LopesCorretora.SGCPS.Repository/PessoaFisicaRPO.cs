@@ -27,28 +27,35 @@ namespace LopesCorretora.SGCPS.Repository
             }
         }
 
-        public static IEnumerable<ModelPesquisa> Pesquisa(string q)
+        public static List<ModelPesquisa> Pesquisa(string q)
         {
-            try
-            {
+            //try
+            //{
                 IEnumerable<ModelPesquisa> ListPessoaFisicaMOD;
-                //using (SGCPSContext context = new SGCPSContext())
-                //{
-                    SGCPSContext context = new SGCPSContext();
+                List<ModelPesquisa> list = new List<ModelPesquisa>();
 
+                using (SGCPSContext context = new SGCPSContext())
+                {
                     ListPessoaFisicaMOD = from pf in context.PessoasFisicas
-                                          where q.Equals(pf.Titular) || q.Equals(pf.PlanoPessoaFisica.NumeroContrato) || q.Equals(pf.CPF) ||
-                                          q.Equals(pf.Observacoes)
+                                          join ppf in context.PlanoPessoasFisicas on pf.PlanoPessoaFisica.Id equals ppf.Id
+                                          where q.Equals(pf.Titular.ToString()) || q.Equals(pf.PlanoPessoaFisica.NumeroContrato.ToString()) || 
+                                          q.Equals(pf.CPF.ToString()) || q.Equals(pf.Observacoes.ToString())
                                           select new ModelPesquisa { Nome = pf.Titular, Documento = pf.CPF, Observacoes = pf.Observacoes, NumeroContrato = pf.PlanoPessoaFisica.NumeroContrato };
-                    context.Dispose();
 
-                //}
-                return ListPessoaFisicaMOD;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+                    if (ListPessoaFisicaMOD.Count() > 0)
+                    {
+                        foreach (var item in ListPessoaFisicaMOD)
+                        {
+                            list.Add(item);
+                        }
+                    }
+                }
+                return list;
+            //}
+            //catch (Exception e)
+            //{
+            //    throw;
+            //}
         }
 
         public static void Cadastrar(PessoaFisicaMOD pessoaFisicaMOD)
