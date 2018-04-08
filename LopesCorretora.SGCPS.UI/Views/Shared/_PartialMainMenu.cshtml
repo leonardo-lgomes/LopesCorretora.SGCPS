@@ -3,10 +3,10 @@
 @model IEnumerable<MainMenu.MenuItem>
 <aside class="col-lg-4">
     <ul>
-        <li class="sizeOfList btn btn-default">@Html.ActionLink("Realizar Pesquisa", "Pesquisa", "Cliente")</li>
-        <li class="sizeOfList btn btn-default">@Html.ActionLink("Realizar Cotação", "", "")</li>
-        <li class="sizeOfList btn btn-default">@Html.ActionLink("Realizar Agendamento", "", "")</li>
-        <li class="sizeOfList btn btn-default">@Html.ActionLink("Planos", "", "")</li>
-        <li class="sizeOfList btn btn-default">@Html.ActionLink("Financeiro", "", "")</li>
+        @Html.ActionLink("Realizar Pesquisa", "Pesquisa", "Cliente", null, new { @class = "sizeOfList btn btn-default" })
+        @Html.ActionLink("Realizar Cotação", "", "", null, new { @class = "sizeOfList btn btn-default" })
+        @Html.ActionLink("Realizar Agendamento", "", "", null, new { @class = "sizeOfList btn btn-default" })
+        @Html.ActionLink("Planos", "Cadastrar", "Plano", null, new { @class = "sizeOfList btn btn-default" })
+        @Html.ActionLink("Financeiro", "Index", "Financeiro", null, new { @class = "sizeOfList btn btn-default" })
     </ul>
 </aside>

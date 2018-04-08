@@ -29,24 +29,30 @@ namespace LopesCorretora.SGCPS.UI.Controllers
                 try
                 {
                     PlanoBUS.CadastrarPlano(planoMOD);
+                    #region mensagem
                     ViewBag.Mensagem = "Plano cadastrado com sucesso!";
                     ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
                     ViewBag.Class = "alert alert-success";
+                    #endregion
                     return View(planoMOD);
                 }
                 catch (Exception)
                 {
+                    #region mensagem
                     ViewBag.Mensagem = "Erro ao cadastrar plano!";
                     ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
                     ViewBag.Class = "alert alert-danger";
+                    #endregion
                     return View(planoMOD);
                 }
             }
             else
             {
+                #region mensagem
                 ViewBag.Mensagem = "Preenchimento invalido!";
                 ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
                 ViewBag.Class = "alert alert-danger";
+                #endregion
                 return View(planoMOD);
             }
         }

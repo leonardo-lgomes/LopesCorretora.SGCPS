@@ -18,7 +18,7 @@ namespace LopesCorretora.SGCPS.Business
                 return new CadastrarPessoaFisicaVM()
                 {
                     ObjPessoaFisicaMOD = new PessoaFisicaMOD(),
-                    LisPlanosMOD = new List<PlanoMOD>(),
+                    LisPlanosMOD = PlanoRPO.Listar(),
                     LisSexo = new Sexo().sexos(),
                     LisStatusMOD = new List<StatusMOD>(),
                     LisNumeroDeParcelas = new List<string>(),
@@ -89,7 +89,7 @@ namespace LopesCorretora.SGCPS.Business
                 AlterarPessoaFisicaVM alterarPessoaFisicaVM = new AlterarPessoaFisicaVM()
                 {
                     //ObjPessoaFisicaMOD = PessoaFisicaRPO.Consultar(id),
-                    LisPlanosMOD = new List<PlanoMOD>(),
+                    LisPlanosMOD = PlanoRPO.Listar(),
                     LisSexo = new Sexo().sexos(),
                     LisStatusMOD = new List<StatusMOD>(),
                     LisNumeroDeParcelas = new List<string>(),

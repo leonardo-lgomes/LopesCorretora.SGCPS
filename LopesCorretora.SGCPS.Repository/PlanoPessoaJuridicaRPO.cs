@@ -9,5 +9,6 @@ namespace LopesCorretora.SGCPS.Repository
 {
     public class PlanoPessoaJuridicaRPO
     {
+
     }
 }

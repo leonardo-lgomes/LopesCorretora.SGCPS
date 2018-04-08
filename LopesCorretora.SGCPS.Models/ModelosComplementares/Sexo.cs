@@ -10,7 +10,6 @@ namespace LopesCorretora.SGCPS.Models.ModelosComplementares
         [Key]
         public int IdSexo { get; set; }
 
-
         [Required]
         public bool sexo;
 

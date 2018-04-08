@@ -4,6 +4,7 @@ using System.Text;
 using LopesCorretora.SGCPS.Repository.DataAccess;
 using LopesCorretora.SGCPS.Models;
 using System.Linq;
+using LopesCorretora.SGCPS.Models.ModelosComplementares;
 
 namespace LopesCorretora.SGCPS.Repository
 {
@@ -19,6 +20,30 @@ namespace LopesCorretora.SGCPS.Repository
                     ObjPessoaFisicaMOD = pessoaFisicaMOD;
                     context.SaveChanges();
                 }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static IEnumerable<ModelPesquisa> Pesquisa(string q)
+        {
+            try
+            {
+                IEnumerable<ModelPesquisa> ListPessoaFisicaMOD;
+                //using (SGCPSContext context = new SGCPSContext())
+                //{
+                    SGCPSContext context = new SGCPSContext();
+
+                    ListPessoaFisicaMOD = from pf in context.PessoasFisicas
+                                          where q.Equals(pf.Titular) || q.Equals(pf.PlanoPessoaFisica.NumeroContrato) || q.Equals(pf.CPF) ||
+                                          q.Equals(pf.Observacoes)
+                                          select new ModelPesquisa { Nome = pf.Titular, Documento = pf.CPF, Observacoes = pf.Observacoes, NumeroContrato = pf.PlanoPessoaFisica.NumeroContrato };
+                    context.Dispose();
+
+                //}
+                return ListPessoaFisicaMOD;
             }
             catch (Exception)
             {
@@ -64,7 +89,7 @@ namespace LopesCorretora.SGCPS.Repository
             {
                 using (SGCPSContext context = new SGCPSContext())
                 {
-                    return (List<PessoaFisicaMOD>) context.PessoasFisicas.Where(x => x.Titular == Titular);
+                    return (List<PessoaFisicaMOD>)context.PessoasFisicas.Where(x => x.Titular == Titular);
                 }
             }
             catch (Exception)

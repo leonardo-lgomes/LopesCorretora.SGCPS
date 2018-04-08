@@ -37,24 +37,30 @@ namespace LopesCorretora.SGCPS.UI.Controllers
             {
                 try
                 {
+                    #region mensagem
                     ViewBag.Mensagem = "Pessoa Juridica cadastrada com sucesso!";
                     ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
                     ViewBag.Class = "alert alert-danger";
+                    #endregion
                     return View(PessoaJuridicaBUS.CadastrarPessoaJuridicaVMPost(cadastrarPessoaJuridicaVM));
                 }
                 catch (Exception)
                 {
+                    #region mensagem
                     ViewBag.Mensagem = "Erro, ao cadastrar pessoa juridica!";
                     ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
                     ViewBag.Class = "alert alert-danger";
+                    #endregion
                     return View(PessoaJuridicaBUS.CadastrarPessoaJuridicaVMPost(cadastrarPessoaJuridicaVM));
                 }
             }
             else
             {
+                #region mensagem
                 ViewBag.Mensagem = "Campos obrigatorios nao preenchidos!";
                 ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
                 ViewBag.Class = "alert alert-danger";
+                #endregion
                 return View(PessoaJuridicaBUS.CadastrarPessoaJuridicaVMPost(cadastrarPessoaJuridicaVM));
             }
         }

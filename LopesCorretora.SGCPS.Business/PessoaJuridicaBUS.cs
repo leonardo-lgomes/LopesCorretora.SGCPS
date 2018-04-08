@@ -9,6 +9,7 @@ namespace LopesCorretora.SGCPS.Business
 {
     public class PessoaJuridicaBUS
     {
+        #region Cadastrar Pessoa Juridica
         public static CadastrarPessoaJuridicaVM CadastrarPessoaJuridicaVMGet()
         {
             try
@@ -46,5 +47,6 @@ namespace LopesCorretora.SGCPS.Business
                 return null;
             }
         }
+        #endregion
     }
 }

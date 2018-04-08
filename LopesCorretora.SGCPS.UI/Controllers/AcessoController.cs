@@ -1,24 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using LopesCorretora.SGCPS.Business;
-using LopesCorretora.SGCPS.Models;
-using LopesCorretora.SGCPS.ViewsModels;
-using LopesCorretora.SGCPS.UI;
 
 namespace LopesCorretora.SGCPS.UI.Controllers
 {
-    public class HomeController : Controller
+    public class AcessoController : Controller
     {
-        public IActionResult Dashboard()
+        public IActionResult Login()
         {
             return View();
         }
 
-        public IActionResult Home()
+        public IActionResult LogOut()
         {
             return View();
         }

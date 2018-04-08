@@ -10,7 +10,7 @@ namespace LopesCorretora.SGCPS.UI.Views.ViewComponents
     {
         private readonly IList<MenuItem> Items = new List<MenuItem> {
             new MenuItem("Realizar Cadastro"),
-            new MenuItem("Realizar Pesquisa", "/clients/search"),
+            new MenuItem("Realizar Pesquisa", "/cliente/pesquisa"),
             new MenuItem("Realizar Cotação"),
             new MenuItem("Realizar Agendamento"),
             new MenuItem("Planos"),

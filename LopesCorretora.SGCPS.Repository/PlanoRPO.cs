@@ -58,5 +58,20 @@ namespace LopesCorretora.SGCPS.Repository
                 throw;
             }
         }
+
+        public static List<PlanoMOD> Listar()
+        {
+            try
+            {
+                using (SGCPSContext context = new SGCPSContext())
+                {
+                    return context.Planos.ToList();
+                }
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
     }
 }

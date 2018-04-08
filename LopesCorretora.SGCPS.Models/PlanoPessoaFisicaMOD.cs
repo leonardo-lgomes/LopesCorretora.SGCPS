@@ -16,7 +16,7 @@ namespace LopesCorretora.SGCPS.Models
         [Required(ErrorMessage = "Campo obrigatorio")]
         [Display(Name = "Numero do contrado", Description = "Numero de contrato, plano pessoa fisica")]
         #endregion
-        public int NumeroContrato { get; set; }
+        public string NumeroContrato { get; set; }
 
         #region DataAnotations
         [Required(ErrorMessage = "Campo obrigatorio")]

@@ -23,9 +23,11 @@ namespace LopesCorretora.SGCPS.UI.Controllers
             }
             else
             {
+                #region mensagem
                 ViewBag.Mensagem = "Erro!";
                 ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
                 ViewBag.Class = "alert alert-danger";
+                #endregion
                 return View("retornar view de erro 404");
             }
         }
@@ -39,16 +41,20 @@ namespace LopesCorretora.SGCPS.UI.Controllers
                 try
                 {
                     PessoaFisicaBUS.ActionCadastrarPessoaFisica(cadastrarPessoaFisicaVM);
+                    #region mensagem
                     ViewBag.Mensagem = "Usuario cadastrado com sucesso!";
                     ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
                     ViewBag.Class = "alert alert-success";
+                    #endregion
                     Cadastrar();
                 }
                 catch (Exception)
                 {
+                    #region mensagem
                     ViewBag.Mensagem = "Erro: Usuario nao cadastrado!";
                     ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
                     ViewBag.Class = "alert alert-danger";
+                    #endregion
                     return View(cadastrarPessoaFisicaVM);
                 }
             }
@@ -58,9 +64,11 @@ namespace LopesCorretora.SGCPS.UI.Controllers
                 ObjCadastrarPessoaFisicaVM.ObjPessoaFisicaMOD = cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD;
                 ObjCadastrarPessoaFisicaVM.LisContatoPessoaFisicaMOD = cadastrarPessoaFisicaVM.LisContatoPessoaFisicaMOD;
                 ObjCadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD = cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD;
+                #region mensagem
                 ViewBag.Mensagem = "Preenchimento invalido!";
                 ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
                 ViewBag.Class = "alert alert-danger";
+                #endregion
                 return View(ObjCadastrarPessoaFisicaVM);
             }
             return View(cadastrarPessoaFisicaVM);

@@ -1,50 +1,51 @@
-﻿<footer>
+﻿<hr />
+<footer>
     <div class="container">
         <hr>
         <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 btn-group btn-group-justified">
             <div class="col-sm-4">
-                <p class="text-center"><a class="footerLinks" href="#">Cadastro</a></p>
+                <p class="text-center">@Html.ActionLink("Cadastro", "Cadastrar", "PessoaFisica", null, new { @class = "footerLinks" })</p>
             </div>
             <div class="col-sm-4">
             </div>
             <div class="col-sm-4">
-                <p class="text-center"><a class="footerLinks" href="#">Cotador Nacional</a></p>
-            </div>
-        </div>
-
-        <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="col-sm-4">
-                <p class="text-center"><a class="footerLinks" href="#">Pesquisa</a></p>
-            </div>
-            <div class="col-sm-4">
-                <p class="text-center"><a class="footerLinks" href="#">Financeiro</a></p>
-            </div>
-            <div class="col-sm-4">
-                <p class="text-center"><a class="footerLinks" href="#">Criar Usuario</a></p>
+                <p class="text-center">@Html.ActionLink("Cotador Nacional", "", "", null, new { @class = "footerLinks" })</p>
             </div>
         </div>
 
         <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="col-sm-4">
-                <p class="text-center"><a class="footerLinks" href="#">Cotação</a></p>
+                <p class="text-center">@Html.ActionLink("Pesquisa", "Pesquisa", "Cliente", null, new { @class = "footerLinks" })</p>
             </div>
             <div class="col-sm-4">
-                <p class="text-center"><a class="footerLinks" href="#">Planos</a></p>
+                <p class="text-center">@Html.ActionLink("Financeiro", "Index", "Financeiro", null, new { @class = "footerLinks" })</p>
             </div>
             <div class="col-sm-4">
-                <p class="text-center"><a class="footerLinks" href="#">DP White</a></p>
+                <p class="text-center">@Html.ActionLink("Criar Usuario", "", "", null, new { @class = "footerLinks" })</p>
             </div>
         </div>
 
         <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="col-sm-4">
-                <p class="text-center"><a class="footerLinks" href="#">Agendamento</a></p>
+                <p class="text-center">@Html.ActionLink("Cotação", "", "", null, new { @class = "footerLinks" })</p>
+            </div>
+            <div class="col-sm-4">
+                <p class="text-center">@Html.ActionLink("Planos", "Cadastrar", "Plano", null, new { @class = "footerLinks" })</p>
+            </div>
+            <div class="col-sm-4">
+                <p class="text-center"><a class="footerLinks" target="_blank" href="http://www.dpwhite.com.br">DP White</a></p>
+            </div>
+        </div>
+
+        <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-sm-4">
+                <p class="text-center">@Html.ActionLink("Agendamento", "", "", null, new { @class = "footerLinks" })</p>
             </div>
             <div class="col-sm-4">
                 <p class="text-center footerParagraph">&copy; - Lopes Corretora</p>
             </div>
             <div class="col-sm-4">
-                <p class="text-center"><a class="footerLinks" href="#">Sair</a></p>
+                <p class="text-center">@Html.ActionLink("Sair", "LogOut", "Acesso", null, new { @class = "footerLinks" })</p>
             </div>
         </div>
     </div>

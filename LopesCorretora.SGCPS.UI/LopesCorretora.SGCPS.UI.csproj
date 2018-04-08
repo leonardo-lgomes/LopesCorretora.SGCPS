@@ -7,7 +7,7 @@
   <ItemGroup>
     <Content Remove="Views\Financeiro\BalancoAnual.cshtml" />
     <Content Remove="Views\Financeiro\BalancoMensal.cshtml" />
-    <Content Remove="Views\Financeiro\ControleDespesas.cshtml" />
+    <Content Remove="Views\Financeiro\ControleDeDespesas.cshtml" />
     <Content Remove="Views\Financeiro\DarBaixa.cshtml" />
     <Content Remove="Views\Home\home.cshtml" />
     <Content Remove="Views\PessoaFisica\Cadastrar.cshtml" />
@@ -33,7 +33,7 @@
   <ItemGroup>
     <None Include="Views\Financeiro\BalancoAnual.cshtml" />
     <None Include="Views\Financeiro\BalancoMensal.cshtml" />
-    <None Include="Views\Financeiro\ControleDespesas.cshtml" />
+    <None Include="Views\Financeiro\ControleDeDespesas.cshtml" />
     <None Include="Views\Financeiro\DarBaixa.cshtml" />
     <None Include="Views\Home\Home.cshtml" />
     <None Include="Views\PessoaFisica\Cadastrar.cshtml" />

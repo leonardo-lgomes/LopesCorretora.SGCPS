@@ -31,7 +31,7 @@ namespace LopesCorretora.SGCPS.UI.Controllers
         }
 
         [HttpGet]
-        public IActionResult ControleDespesas()
+        public IActionResult ControleDeDespesas()
         {
             return View();
         }

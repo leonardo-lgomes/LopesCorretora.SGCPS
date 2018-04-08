@@ -12,19 +12,19 @@
     </div>
     <div class="row" id="opcoesFinanceiro">
         <div class="col-xs-3 col-sm-3 col-md-3">
-            <button type="button" class="btn btn-default" id="buttonOpcoes">Balanço Mensal</button>
+            @Html.ActionLink("Balanco Mensal", "BalancoMensal", "Financeiro", null, new { @class = "btn btn-default" })
         </div>
 
         <div class="col-xs-3 col-sm-3 col-md-3">
-            <button type="button" class="btn btn-default" id="buttonOpcoes">Balanço Anual</button>
+            @Html.ActionLink("Balanco Anual", "BalancoAnual", "Financeiro", null, new { @class = "btn btn-default" })
         </div>
 
         <div class="col-xs-3 col-sm-3 col-md-3">
-            <button type="button" class="btn btn-default" id="buttonOpcoes">Despesas</button>
+            @Html.ActionLink("Despesas", "ControleDeDespesas", "Financeiro", null, new { @class = "btn btn-default" })
         </div>
 
         <div class="col-xs-3 col-sm-3 col-md-3">
-            <button type="button" class="btn btn-default" id="buttonOpcoes">Dar Baixa</button>
+            @Html.ActionLink("Dar Baixa", "DarBaixa", "Financeiro", null, new { @class = "btn btn-default" })
         </div>
     </div>
 </div>

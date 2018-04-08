@@ -9,45 +9,49 @@
         <div class="container">
             <h1>Realizar Pesquisa</h1>
             <hr class="shortHr">
-            <form asp-action="Search" asp-controller="Clients" method="get" class="row mt-5">
+
+
+            @using (Html.BeginForm("Pesquisa", "Cliente", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
                 <div class="col-md-8 text-center">
                     <p class="text-center"><input type="text" id="CaixaBusca" class="form-control CaixaBusca" name="q" placeholder="Pesquisar..." /></p>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                        <p class="text-center"><button type="button" class="btn btn-default buttonPesquisar" id=""> Pesquisar </button></p>
+                        <p class="text-center"><button type="submit" class="btn btn-default buttonPesquisar" id=""> Pesquisar </button></p>
                     </div>
                 </div>
-            </form>
+            }
 
 
             <h2>Resultados</h2>
             <hr class="shortHr">
-            @if (Model.LisPessoaFisicaMOD != null)
+            @if (Model.ListModelPesquisa != null)
             {
-                @foreach (var client in Model.LisPessoaFisicaMOD)
+                if (Model.ListModelPesquisa.Count > 0)
                 {
-                    <div class="panel panel-default">
-                        <div class="panel-heading">@client.Titular</div>
-                        <div class="panel-body">
-                            <p>Observação: @client.Observacoes</p>
+                    @foreach (var client in Model.ListModelPesquisa)
+                    {
+                        <div class="panel panel-default">
+                            <div class="panel-heading">@client.Nome</div>
+                            <div class="panel-body">
+                                <p>Observação: @client.Observacoes</p>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item">Cpf/Cnpj: @client.Documento</li>
+                                <li class="list-group-item">Número do Contrato: @client.NumeroContrato</li>
+                                <li class="list-group-item">
+                                    <a href="" class="btn btn-large btn-default card-link">Dar Baixa</a>
+                                    <a href="" class="btn btn-large btn-default card-link">Ver Mais</a>
+                                </li>
+                            </ul>
                         </div>
-                        <ul class="list-group">
-                            <li class="list-group-item">Cpf/Cnpj: @client.CPF</li>
-                            <li class="list-group-item">Número do Contrato: @client.ObjPlanoPessoaFisicaMOD.NumeroContrato</li>
-                            <li class="list-group-item">
-                                <a href="" class="btn btn-large btn-default card-link">Dar Baixa</a>
-                                <a href="" class="btn btn-large btn-default card-link">Ver Mais</a>
-                            </li>
-                        </ul>
-                    </div>
+                    }
                 }
-            }
-            else
-            {
-                <div class="col-md-12 alert alert-info">
-                    <p>Não há resultados para a sua busca.</p>
-                </div>
+                else
+                {
+                    @Html.Partial("_Errors")
+                }
             }
         </div>
     </div>
