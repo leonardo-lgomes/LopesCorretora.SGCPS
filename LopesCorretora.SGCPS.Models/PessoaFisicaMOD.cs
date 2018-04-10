@@ -58,7 +58,7 @@ namespace LopesCorretora.SGCPS.Models
         [Required(ErrorMessage = "Campo obrigatorio")]
         [Display(Name ="Numero do SUS",Description = "Numero do SUS, pessoa fisica")]
         #endregion
-        public int NumeroDoSUS { get; set; }
+        public int? NumeroDoSUS { get; set; }
 
         #region DataAnnotations
         [Required(ErrorMessage = "Campo obrigatorio")]
@@ -76,7 +76,7 @@ namespace LopesCorretora.SGCPS.Models
         [Required(ErrorMessage = "Campo obrigatorio")]
         [Display(Name ="Data de nascimente",Description = "Data de nascimente, fisica")]
         #endregion
-        public DateTime DataDeNascimento { get; set; }
+        public DateTime? DataDeNascimento { get; set; }
 
         public EnderecoMOD Endereco { get; set; }
 
@@ -93,6 +93,5 @@ namespace LopesCorretora.SGCPS.Models
             Status = new StatusMOD();
             Sexo = new Sexo();
         }
-
     }
 }

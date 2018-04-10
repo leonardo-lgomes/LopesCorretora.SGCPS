@@ -43,13 +43,13 @@ namespace LopesCorretora.SGCPS.Repository
             }
         }
 
-        public static void Consultar()
+        public static PlanoMOD Consultar(int Id)
         {
             try
             {
                 using (SGCPSContext context = new SGCPSContext())
                 {
-
+                    return context.Planos.Where(x => x.Id == Id).First();
                 }
             }
             catch (Exception)

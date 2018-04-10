@@ -32,7 +32,7 @@ namespace LopesCorretora.SGCPS.Models
         [Required(ErrorMessage = "Campo obrigatorio")]
         [Display(Name = "Data de nascimento", Description = "Data de nascimento do dependente, pessoa fisica")]
         #endregion
-        public DateTime DataDeNascimento { get; set; }
+        public DateTime? DataDeNascimento { get; set; }
 
         #region DataAnnotations
         [Required(ErrorMessage = "Campo obrigatorio")]

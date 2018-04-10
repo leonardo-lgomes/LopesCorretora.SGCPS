@@ -40,7 +40,7 @@ namespace LopesCorretora.SGCPS.Models
         [Required(ErrorMessage = "Campo obrigatorio")]
         [Display(Name ="Numero",Description = "Numero endereco, pessoa fisica")]
         #endregion
-        public int Numero { get; set; }
+        public int? Numero { get; set; }
 
         #region DataAnnotations
         [Required(ErrorMessage = "Campo obrigatorio")]
@@ -58,6 +58,6 @@ namespace LopesCorretora.SGCPS.Models
         [Required(ErrorMessage = "Campo obrigatorio")]
         [Display(Name ="CEP",Description = "CEP, pessoa fisica")]
         #endregion
-        public int CEP { get; set; }
+        public string CEP { get; set; }
     }
 }

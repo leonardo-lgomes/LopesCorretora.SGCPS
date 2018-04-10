@@ -28,13 +28,13 @@ namespace LopesCorretora.SGCPS.Models
         [Required(ErrorMessage = "Campo obrigatorio")]
         [Display(Name = "Valor de entrada", Description = "Valor de entrada do plano, pessoa fisica")]
         #endregion
-        public decimal ValorDeEntrada { get; set; }
+        public decimal? ValorDeEntrada { get; set; }
 
         #region DataAnotations
         [Required(ErrorMessage = "Campo obrigatorio")]
         [Display(Name = "Numero de parcelas", Description = "Numero de parcelas do plano, pessoa fisica")]
         #endregion
-        public int NumeroDeParcelas { get; set; }
+        public int? NumeroDeParcelas { get; set; }
 
         public PlanoMOD Plano { get; set; }
     }

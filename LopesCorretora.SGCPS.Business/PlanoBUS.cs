@@ -21,5 +21,10 @@ namespace LopesCorretora.SGCPS.Business
                 throw;
             }
         }
+
+        public static PlanoMOD RetornarPlano(int Id)
+        {
+            return PlanoRPO.Consultar(Id);
+        }
     }
 }

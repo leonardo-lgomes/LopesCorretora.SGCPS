@@ -20,9 +20,7 @@ namespace LopesCorretora.SGCPS.Business
                     ObjPessoaFisicaMOD = new PessoaFisicaMOD(),
                     LisPlanosMOD = PlanoRPO.Listar(),
                     LisSexo = new Sexo().sexos(),
-                    LisStatusMOD = new List<StatusMOD>(),
-                    LisNumeroDeParcelas = new List<string>(),
-                    LisEstadoCivil = new List<string>(),
+                    LisStatusMOD = StatusRPO.Listar(),
                 };
             }
             catch (Exception)

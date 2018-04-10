@@ -43,6 +43,21 @@ namespace LopesCorretora.SGCPS.Repository
             }
         }
 
+        public static List<StatusMOD> Listar()
+        {
+            try
+            {
+                using (SGCPSContext context = new SGCPSContext())
+                {
+                    return context.Status.ToList();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public static void Consultar()
         {
             try

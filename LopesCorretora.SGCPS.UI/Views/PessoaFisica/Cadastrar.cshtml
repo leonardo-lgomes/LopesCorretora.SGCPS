@@ -230,7 +230,7 @@
                 <div class="form-group">
                     @* substiruir por dropdown e listar planos disponiveis *@
                     @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.Plano)
-                    @Html.DropDownListFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.Plano, new SelectList((System.Collections.IEnumerable)Model.LisPlanosMOD, "Id", "Plano"), "Selecione", new { @class = "form-control", id = "Plano", size = "1", @*selected = ""*@})
+                    @Html.DropDownListFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.Plano, new SelectList((System.Collections.IEnumerable)Model.LisPlanosMOD, "Id", "Plano"), "Selecione", new { onchange= "RetornarPlano()", @class = "form-control", id = "Plano", size = "1", @*selected = ""*@})
                     @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.Plano, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -254,8 +254,8 @@
         <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-6">
                 <div class="form-group">
-                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Status.Id)
-                    @Html.DropDownListFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Status.Id, new SelectList((System.Collections.IEnumerable)Model.LisStatusMOD, "[nome da propriedade do objeto que sera o value do comboBox]", "[nome da propriedade do objeto que sera o texto do comboBox]"), "Selecione", new { @class = "form-control", id = "Status", size = "1", @*selected = ""*@})
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Status.Id, "Status")
+                    @Html.DropDownListFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Status.Id, new SelectList((System.Collections.IEnumerable)Model.LisStatusMOD, "Id", "Status"), "Selecione", new { @class = "form-control", id = "Status", size = "1", @*selected = ""*@})
                     @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Status.Id, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -353,8 +353,7 @@
                         @Html.DropDownListFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].EstadoCivil, new SelectList
                         (new[] { new { value = "casado", text = "Casado" }, new { value = "solteiro", text = "Solteiro" } }, "value", "text"),
                         "Selecione", new { @class = "form-control", id = "EstadoCivilDependente", size = "1", @*selected = ""*@})
-                        @Html.DropDownListFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].EstadoCivil, new SelectList((System.Collections.IEnumerable)Model.LisEstadoCivil, "[nome da propriedade do objeto que sera o value do comboBox]", "[nome da propriedade do objeto que sera o texto do comboBox]"), "Selecione", new { @class = "form-control", id = "EstadoCivilDependente", size = "1", @*selected = ""*@})
-                        @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].EstadoCivil, "", new { @class = "text-danger" })
+                        @*@Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].EstadoCivil, "", new { @class = "text-danger" })*@
                     </div>
                 </div>
 
