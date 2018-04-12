@@ -125,5 +125,13 @@ namespace LopesCorretora.SGCPS.UI.Controllers
             }
         }
         #endregion
+
+        #region Json
+        [HttpGet]
+        public IActionResult RetornaPlano(int Id)
+        {
+            return Json(PlanoBUS.RetornarPlano(Id));
+        }
+        #endregion
     }
 }

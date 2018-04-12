@@ -49,7 +49,6 @@ namespace LopesCorretora.SGCPS.Models
         public string Complemento { get; set; }
 
         #region DataAnnotations
-        [Required(ErrorMessage = "Campo obrigatorio")]
         [Display(Name = "Ponto de Referencia", Description = "Ponto de Referencia do endereco. Pessoa fisica")]
         #endregion
         public string Referencia { get; set; }

@@ -67,7 +67,7 @@ namespace LopesCorretora.SGCPS.Models
         public string Observacoes { get; set; }
 
         #region DataAnnotations
-        [Required(ErrorMessage = "Campo obrigatorio")]
+        //[Required(ErrorMessage = "Campo obrigatorio")]
         [Display(Name ="Documentos (anexo)",Description = "Documentos (anexo), pessoa fisica")]
         #endregion
         public string DocumentosAnexo { get; set; }
@@ -82,7 +82,11 @@ namespace LopesCorretora.SGCPS.Models
 
         public PlanoPessoaFisicaMOD PlanoPessoaFisica { get; set; }
 
+        public int StatusId { get; set; }
+
         public StatusMOD Status { get; set; }
+
+        public int SexoId { get; set; }
 
         public Sexo Sexo { get; set; }
 

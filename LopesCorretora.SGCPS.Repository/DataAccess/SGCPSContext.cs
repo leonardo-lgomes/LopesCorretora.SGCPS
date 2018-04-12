@@ -1,5 +1,6 @@
 ﻿using LopesCorretora.SGCPS.Models;
 using Microsoft.EntityFrameworkCore;
+using LopesCorretora.SGCPS.Models.ModelosComplementares;
 
 namespace LopesCorretora.SGCPS.Repository.DataAccess
 {
@@ -16,6 +17,7 @@ namespace LopesCorretora.SGCPS.Repository.DataAccess
         public DbSet<PlanoPessoaJuridicaMOD> PlanoPessoasJuridicas { get; set; }
         public DbSet<StatusMOD> Status { get; set; }
         public DbSet<UsuarioMOD> Usuarios { get; set; }
+        public DbSet<Sexo> Sexo { get; set; }
 
         public SGCPSContext(DbContextOptions<SGCPSContext> options) : base(options)
         {

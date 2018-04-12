@@ -1,15 +1,19 @@
 ﻿// Write your JavaScript code.
-function fctPreencheComboItem() {
+function RetornarPlano() {
     $.ajax({
         type: "GET",
-        url: '/PessoaFisica/RetornarPlano?Id=' + $("#Plano").val(),
-        data: "{}",
-        cache: false,
-        dataType: "html",
-        assync: true,
+        url: 'RetornarPlano?Id=',
         success: function (data) {
             var parsed = JSON.parse(data);
-            document.getElementById('TelefoneDoPlano').value = parsed.telefoneDoPlano;
+            var arr = [];
+            for (var x in parsed) {
+                arr.push(parsed[x]);
+            }
+            $("#decIteId").empty();
+            $("#decIteId").append("<option value='0'>Selecione</option>");
+            $.each(arr, function (i, v) {
+                $("#decIteId").append("<option value='" + v.decIteId + "'>" + v.strIteDescricao + "</option>")
+            });
         }
     })
 }

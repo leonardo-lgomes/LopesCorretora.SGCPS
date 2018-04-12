@@ -1,4 +1,10 @@
-﻿
+﻿/*footer*/
+
+.footer {
+    padding-top: 40px !important;
+}
+
+
 /*Inicio troca de cores*/
 body {
     background-color: #eaedf0 !important;

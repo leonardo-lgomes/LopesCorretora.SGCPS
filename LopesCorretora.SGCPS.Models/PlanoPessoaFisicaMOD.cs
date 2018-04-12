@@ -36,6 +36,8 @@ namespace LopesCorretora.SGCPS.Models
         #endregion
         public int? NumeroDeParcelas { get; set; }
 
+        public int PlanoId { get; set; }
+
         public PlanoMOD Plano { get; set; }
     }
 }

@@ -56,11 +56,5 @@ namespace LopesCorretora.SGCPS.UI.Controllers
                 return View(planoMOD);
             }
         }
-
-        [HttpGet]
-        public JsonResult RetornaPlano(int Id)
-        {
-            return Json(PlanoBUS.RetornarPlano(Id));
-        }
     }
 }

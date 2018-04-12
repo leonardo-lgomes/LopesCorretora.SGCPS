@@ -19,7 +19,7 @@ namespace LopesCorretora.SGCPS.Business
                 {
                     ObjPessoaFisicaMOD = new PessoaFisicaMOD(),
                     LisPlanosMOD = PlanoRPO.Listar(),
-                    LisSexo = new Sexo().sexos(),
+                    LisSexo = SexoRPO.Listar(),
                     LisStatusMOD = StatusRPO.Listar(),
                 };
             }
@@ -33,11 +33,12 @@ namespace LopesCorretora.SGCPS.Business
         {
             try
             {
+                //PopularObjetos(cadastrarPessoaFisicaVM);
+                CadastrarPessoaFisica(cadastrarPessoaFisicaVM);
                 CadastrarContatoPessoaFisica(cadastrarPessoaFisicaVM);
                 CadastrarDependentePessoaFisica(cadastrarPessoaFisicaVM);
-                CadastrarPessoaFisica(cadastrarPessoaFisicaVM);
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 throw;
             }
@@ -77,6 +78,14 @@ namespace LopesCorretora.SGCPS.Business
                 PessoaFisicaRPO.Cadastrar(cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD);
             }
         }
+
+        public static CadastrarPessoaFisicaVM PopularObjetos(CadastrarPessoaFisicaVM cadastrarPessoaFisicaVM)
+        {
+            cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano = 
+                PlanoRPO.Consultar(cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.Id);
+
+            return null;
+        }
         #endregion
 
         #region Action BUS: Alterar Pessoa Fisica
@@ -88,7 +97,7 @@ namespace LopesCorretora.SGCPS.Business
                 {
                     //ObjPessoaFisicaMOD = PessoaFisicaRPO.Consultar(id),
                     LisPlanosMOD = PlanoRPO.Listar(),
-                    LisSexo = new Sexo().sexos(),
+                    LisSexo = SexoRPO.Listar(),
                     LisStatusMOD = new List<StatusMOD>(),
                     LisNumeroDeParcelas = new List<string>(),
                     LisEstadoCivil = new List<string>(),
