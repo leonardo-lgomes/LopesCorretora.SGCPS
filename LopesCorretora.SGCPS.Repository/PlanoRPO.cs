@@ -52,7 +52,7 @@ namespace LopesCorretora.SGCPS.Repository
                     return context.Planos.Where(x => x.Id == Id).First();
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
                 throw;

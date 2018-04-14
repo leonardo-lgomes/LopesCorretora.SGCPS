@@ -46,7 +46,7 @@ namespace LopesCorretora.SGCPS.UI.Controllers
                     ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
                     ViewBag.Class = "alert alert-success";
                     #endregion
-                    Cadastrar();
+                    return View(PessoaFisicaBUS.PopularVM(cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD));
                 }
                 catch (Exception)
                 {
@@ -71,7 +71,6 @@ namespace LopesCorretora.SGCPS.UI.Controllers
                 #endregion
                 return View(ObjCadastrarPessoaFisicaVM);
             }
-            return View(cadastrarPessoaFisicaVM);
         }
         #endregion
 
@@ -96,7 +95,7 @@ namespace LopesCorretora.SGCPS.UI.Controllers
             }
             else
             {
-                ViewBag.Mensagem = "Usuario nao encostrado!";
+                ViewBag.Mensagem = "Usuario nao encontrado!";
                 ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
                 ViewBag.Class = "alert alert-danger";
                 return View("retornar pagina de erro 404");
@@ -118,7 +117,7 @@ namespace LopesCorretora.SGCPS.UI.Controllers
             {
                 AlterarPessoaFisicaVM alterarPessoaFisicaVM = PessoaFisicaBUS.AlterarPessoaFisicaVM(ObjAlterarPessoaFisicaVM.ObjPessoaFisicaMOD.Id);
                 alterarPessoaFisicaVM.ObjPessoaFisicaMOD = alterarPessoaFisicaVM.ObjPessoaFisicaMOD;
-                ViewBag.Mensagem = "Pessoa fisica alterada com sucesso!";
+                ViewBag.Mensagem = "Preenchimento Invalido!";
                 ViewBag.Style = "display:block; text-align:center; margin-top: 5%";
                 ViewBag.Class = "alert alert-danger";
                 return View(alterarPessoaFisicaVM);

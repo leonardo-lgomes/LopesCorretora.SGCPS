@@ -20,12 +20,6 @@ namespace LopesCorretora.SGCPS.Models
 
         #region DataAnotations
         [Required(ErrorMessage = "Campo obrigatorio")]
-        [Display(Name = "Status", Description = "Status do cliente, pessoa fisica")]
-        #endregion
-        public string StatusDoCliente { get; set; }
-
-        #region DataAnotations
-        [Required(ErrorMessage = "Campo obrigatorio")]
         [Display(Name = "Valor de entrada", Description = "Valor de entrada do plano, pessoa fisica")]
         #endregion
         public decimal? ValorDeEntrada { get; set; }
@@ -38,6 +32,6 @@ namespace LopesCorretora.SGCPS.Models
 
         public int PlanoId { get; set; }
 
-        public PlanoMOD Plano { get; set; }
+        //public PlanoMOD Plano { get; set; }
     }
 }

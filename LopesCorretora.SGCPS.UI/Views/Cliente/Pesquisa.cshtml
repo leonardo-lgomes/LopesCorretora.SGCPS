@@ -42,7 +42,7 @@
                                 <li class="list-group-item">Número do Contrato: @client.NumeroContrato</li>
                                 <li class="list-group-item">
                                     <a href="" class="btn btn-large btn-default card-link">Dar Baixa</a>
-                                    <a href="" class="btn btn-large btn-default card-link">Ver Mais</a>
+                                    @Html.ActionLink("Ver Mais", "Redirecionar", "Cliente", new { Id = client.Id, Tipo = client.Tipo  }, new { @class= "btn btn-large btn-default card-link", id="verMais" })
                                 </li>
                             </ul>
                         </div>

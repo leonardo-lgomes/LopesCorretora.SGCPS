@@ -69,9 +69,19 @@ namespace LopesCorretora.SGCPS.Repository
                 {
                     ListPessoaJuridicas = from pj in context.PessoasJuridicas
                                           join ppj in context.PlanoPessoasJuridicas on pj.Id equals ppj.PessoaJuridica.Id
-                                          where q.Equals(pj.RazaoSocial.ToString()) || q.Equals(ppj.NumeroContrato.ToString()) || 
-                                          q.Equals(pj.CNPJ.ToString()) || q.Equals(ppj.Observacoes.ToString())
-                                          select new ModelPesquisa { Nome = pj.RazaoSocial, Documento = pj.CNPJ, Observacoes = ppj.Observacoes, NumeroContrato = ppj.NumeroContrato };
+                                          where q.ToLower().Equals(pj.RazaoSocial.ToString().ToLower()) ||
+                                          q.ToLower().Equals(ppj.NumeroContrato.ToString().ToLower()) ||
+                                          q.ToLower().Equals(pj.CNPJ.ToString().ToLower()) ||
+                                          q.ToLower().Equals(ppj.Observacoes.ToString().ToLower())
+                                          select new ModelPesquisa
+                                          {
+                                              Nome = pj.RazaoSocial,
+                                              Documento = pj.CNPJ,
+                                              Observacoes = ppj.Observacoes,
+                                              NumeroContrato = ppj.NumeroContrato,
+                                              Id = pj.Id,
+                                              Tipo = "PessoaJuridica"
+                                          };
                     foreach (var item in ListPessoaJuridicas)
                     {
                         list.Add(item);

@@ -56,5 +56,10 @@ namespace LopesCorretora.SGCPS.UI.Controllers
                 return View(planoMOD);
             }
         }
+
+        public IActionResult Listar()
+        {
+            return View();
+        }
     }
 }

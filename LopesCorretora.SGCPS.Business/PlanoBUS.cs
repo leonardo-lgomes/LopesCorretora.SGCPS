@@ -9,6 +9,14 @@ namespace LopesCorretora.SGCPS.Business
 {
     public class PlanoBUS
     {
+        public static PlanosVM ListarPlanos()
+        {
+            return new PlanosVM
+            {
+                ListPlanosMOD = PlanoRPO.Listar()
+            };
+        }
+
         public static PlanoMOD CadastrarPlano(PlanoMOD planoMOD)
         {
             try

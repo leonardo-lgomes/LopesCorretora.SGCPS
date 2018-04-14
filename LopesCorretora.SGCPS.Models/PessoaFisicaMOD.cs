@@ -78,7 +78,12 @@ namespace LopesCorretora.SGCPS.Models
         #endregion
         public DateTime? DataDeNascimento { get; set; }
 
+        public int EnderecoId { get; set; }
+
         public EnderecoMOD Endereco { get; set; }
+
+        [Required]
+        public int PlanoPessoaFisicaId { get; set; }
 
         public PlanoPessoaFisicaMOD PlanoPessoaFisica { get; set; }
 

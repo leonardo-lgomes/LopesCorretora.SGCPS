@@ -58,6 +58,9 @@ namespace LopesCorretora.SGCPS.Models
         #endregion
         public string NumeroDoSUS { get; set; }
 
+        [Required]
+        public int PessoaFisicaId { get; set; }
+
         public PessoaFisicaMOD PessoaFisica { get; set; }
 
         public DependentePessoaFisicaMOD(PessoaFisicaMOD pessoaFisicaMOD)

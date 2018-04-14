@@ -50,6 +50,9 @@ namespace LopesCorretora.SGCPS.Models
         #endregion
         public EnderecoMOD EnderecoEntrega { get; set; }
 
+        [Required]
+        public int StatusId { get; set; }
+
         public StatusMOD Status { get; set; }
 
         public PessoaJuridicaMOD()

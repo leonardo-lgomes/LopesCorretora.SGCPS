@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
-            <h1> Realizar Cadastro </h1>
+            <h1> Realizar Alteracao </h1>
         </div>
     </div>
 
@@ -17,14 +17,15 @@
         </div>
     </div>
     @Html.Partial("_Errors")
-    @using (Html.BeginForm("Cadastrar", "PessoaFisica", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    @using (Html.BeginForm("Alterar", "PessoaFisica", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Titular)
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Titular, new { @class = "form-control", type = "text", id = "titular", placeholder = "Titular." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Titular, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Id)
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Titular)
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Titular, new { @class = "form-control", type = "text", id = "Titular", placeholder = "Titular." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Titular, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
@@ -32,34 +33,34 @@
         <div class="row">
             <div class="col-xs-3 col-sm-3 col-md-3">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.CPF)
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.CPF, new { @class = "form-control", type = "text", id = "cpf", placeholder = "CPF." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.CPF, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.CPF)
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.CPF, new { @class = "form-control", type = "text", id = "CPF", placeholder = "CPF." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.CPF, "", new { @class = "text-danger" })
                 </div>
             </div>
 
             <div class="col-xs-3 col-sm-3 col-md-3">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.RG)
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.RG, new { @class = "form-control", type = "text", id = "rg", placeholder = "RG." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.RG, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.RG)
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.RG, new { @class = "form-control", type = "text", id = "RG", placeholder = "RG." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.RG, "", new { @class = "text-danger" })
                 </div>
             </div>
 
             <div class="col-xs-4 col-sm-4 col-md-4">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.DataDeNascimento)
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.DataDeNascimento, new { @class = "form-control", type = "text", id = "nasc", placeholder = "Data De Nascimento." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.DataDeNascimento, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.DataDeNascimento)
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.DataDeNascimento, new { @class = "form-control", type = "text", id = "DataDeNascimento", placeholder = "Data De Nascimento." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.DataDeNascimento, "", new { @class = "text-danger" })
                 </div>
             </div>
 
 
             <div class="col-xs-2 col-sm-2 col-md-2">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Sexo)
-                    @Html.DropDownListFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Sexo, new SelectList((System.Collections.IEnumerable)Model.LisSexo, "StrSexo", "StrSexo"), "Selecione", new { @class = "form-control", id = "Sexo", size = "1", @*selected = ""*@})
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Sexo, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Sexo)
+                    @Html.DropDownListFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.SexoId, new SelectList((System.Collections.IEnumerable)Model.LisSexo, "Id", "Descricao"), "Selecione", new { @class = "form-control", id = "Sexo", size = "1", @*selected = ""*@})
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Sexo, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
@@ -67,19 +68,20 @@
         <div class="row">
             <div class="col-xs-2 col-sm-2 col-md-2">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.EstadoCivil)
-                    @Html.DropDownListFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.EstadoCivil, new SelectList
-                    (new[] { new { value = "casado", text = "Casado" }, new { value = "solteiro", text = "Solteiro" } }, "value", "text"),
-                    "Selecione", new { @class = "form-control", id = "EstadoCivil", size = "1", @*selected = ""*@})
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.EstadoCivil, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.EstadoCivil)
+                    @Html.DropDownListFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.EstadoCivil, new SelectList
+                         (new[] { new { value = "casado", text = "Casado" }, new { value = "solteiro", text = "Solteiro" } }, "value", "text"),
+                         /**/
+                         "Selecione", new { @class = "form-control", id = "EstadoCivil", size = "1", @*selected = ""*@})
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.EstadoCivil, "", new { @class = "text-danger" })
                 </div>
             </div>
 
             <div class="col-xs-10 col-sm-10 col-md-10">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Email)
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Email, new { @class = "form-control", type = "text", id = "Email", placeholder = "E-mail." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Email, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Email)
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Email, new { @class = "form-control", type = "text", id = "Email", placeholder = "E-mail." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Email, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
@@ -96,34 +98,37 @@
 
             <div class="col-xs-3 col-sm-3 col-md-3">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisContatoPessoaFisicaMOD[0].Contato, "Telefone")
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisContatoPessoaFisicaMOD[0].Contato, new { @class = "form-control", type = "text", id = "contato", value = "", placeholder = "Telefone." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisContatoPessoaFisicaMOD[0].Contato, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisContatoPessoaFisicaMOD[0].Id)
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisContatoPessoaFisicaMOD[0].Contato, "Telefone")
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisContatoPessoaFisicaMOD[0].Contato, new { @class = "form-control", type = "text", id = "Contato1", value = "", placeholder = "Telefone." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisContatoPessoaFisicaMOD[0].Contato, "", new { @class = "text-danger" })
                 </div>
             </div>
 
             <div class="col-xs-3 col-sm-3 col-md-3">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisContatoPessoaFisicaMOD[1].Contato, "Celular")
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisContatoPessoaFisicaMOD[1].Contato, new { @class = "form-control", type = "text", id = "contato", placeholder = "Celular." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisContatoPessoaFisicaMOD[1].Contato, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisContatoPessoaFisicaMOD[1].Id)
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisContatoPessoaFisicaMOD[1].Contato, "Celular")
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisContatoPessoaFisicaMOD[1].Contato, new { @class = "form-control", type = "text", id = "Contato2", placeholder = "Celular." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisContatoPessoaFisicaMOD[1].Contato, "", new { @class = "text-danger" })
                 </div>
             </div>
 
 
             <div class="col-xs-3 col-sm-3 col-md-3">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Cidade)
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Cidade, new { @class = "form-control", type = "text", id = "Cidade", placeholder = "Cidade." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Cidade, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Id)
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Cidade)
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Cidade, new { @class = "form-control", type = "text", id = "Cidade", placeholder = "Cidade." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Cidade, "", new { @class = "text-danger" })
                 </div>
             </div>
 
             <div class="col-xs-1 col-sm-1 col-md-1">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.UF)
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.UF, new { @class = "form-control", type = "text", id = "UF", placeholder = "UF." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.UF, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.UF)
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.UF, new { @class = "form-control", type = "text", id = "UF", placeholder = "UF." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.UF, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
@@ -131,43 +136,43 @@
         <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-6">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Rua)
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Rua, new { @class = "form-control", type = "text", id = "Rua", placeholder = "Rua." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Rua, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Rua)
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Rua, new { @class = "form-control", type = "text", id = "Rua", placeholder = "Rua." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Rua, "", new { @class = "text-danger" })
                 </div>
             </div>
 
             <div class="col-xs-2 col-sm-2 col-md-2">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Numero)
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Numero, new { @class = "form-control", type = "text", id = "Numero", Value = "", placeholder = "Numero." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Numero, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Numero)
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Numero, new { @class = "form-control", type = "text", id = "Numero", Value = "", placeholder = "Numero." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Numero, "", new { @class = "text-danger" })
                 </div>
             </div>
 
 
             <div class="col-xs-4 col-sm-4 col-md-4">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Complemento)
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Complemento, new { @class = "form-control", type = "text", id = "Complemento", placeholder = "Complemento." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Complemento, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Complemento)
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Complemento, new { @class = "form-control", type = "text", id = "Complemento", placeholder = "Complemento." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Complemento, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-8 col-sm-8 col-md-8">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Bairro)
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Bairro, new { @class = "form-control", type = "text", id = "Bairro", placeholder = "Bairro." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Bairro, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Bairro)
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Bairro, new { @class = "form-control", type = "text", id = "Bairro", placeholder = "Bairro." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.Bairro, "", new { @class = "text-danger" })
                 </div>
             </div>
 
             <div class="col-xs-4 col-sm-4 col-md-4">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.CEP)
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.CEP, new { @class = "form-control", type = "text", id = "CEP", placeholder = "CEP." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.CEP, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.CEP)
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.CEP, new { @class = "form-control", type = "text", id = "CEP", placeholder = "CEP." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Endereco.CEP, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
@@ -175,9 +180,9 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.MaeDoTitular)
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.MaeDoTitular, new { @class = "form-control", type = "text", id = "MaeDoTitular", placeholder = "Mae Do Titular." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.MaeDoTitular, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.MaeDoTitular)
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.MaeDoTitular, new { @class = "form-control", type = "text", id = "MaeDoTitular", placeholder = "Mae Do Titular." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.MaeDoTitular, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
@@ -185,17 +190,17 @@
         <div class="row">
             <div class="col-xs-8 col-sm-8 col-md-8">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.ResponsavelGeral)
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.ResponsavelGeral, new { @class = "form-control", type = "text", id = "ResponsavelGeral", placeholder = "Responsavel Geral." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.ResponsavelGeral, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.ResponsavelGeral)
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.ResponsavelGeral, new { @class = "form-control", type = "text", id = "ResponsavelGeral", placeholder = "Responsavel Geral." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.ResponsavelGeral, "", new { @class = "text-danger" })
                 </div>
             </div>
 
             <div class="col-xs-4 col-sm-4 col-md-4">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.NumeroDoSUS)
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.NumeroDoSUS, new { @class = "form-control", type = "text", id = "NumeroDoSUS", placeholder = "Numero DoS US." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.NumeroDoSUS, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.NumeroDoSUS)
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.NumeroDoSUS, new { @class = "form-control", type = "text", id = "NumeroDoSUS", placeholder = "Numero DoS US." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.NumeroDoSUS, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
@@ -204,9 +209,9 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Observacoes)
-                    @Html.TextAreaFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Observacoes, new { @class = "form-control", type = "text", id = "Observacoes", placeholder = "Observacoes." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Observacoes, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Observacoes)
+                    @Html.TextAreaFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Observacoes, new { @class = "form-control", type = "text", id = "Observacoes", placeholder = "Observacoes." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Observacoes, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
@@ -229,48 +234,53 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     @* substiruir por dropdown e listar planos disponiveis *@
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.Plano)
-                    @Html.DropDownListFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.Plano, new SelectList((System.Collections.IEnumerable)Model.LisPlanosMOD, "Id", "Plano"), "Selecione", new { @class = "form-control", id = "Plano", size = "1", @*selected = ""*@})
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.Plano, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.PlanoId, "Plano")
+                    @Html.DropDownListFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.PlanoId, new SelectList((System.Collections.IEnumerable)Model.LisPlanosMOD, "Id", "Plano"), "Selecione", new { onchange = "RetornarPlano()", @class = "form-control", id = "Plano", size = "1", @*selected = ""*@})
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.PlanoId, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-8 col-sm-8 col-md-8">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.NumeroContrato)
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.NumeroContrato, new { @class = "form-control", type = "text", id = "NumeroContrato", placeholder = "Numero Contrato." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.NumeroContrato, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.NumeroContrato)
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.NumeroContrato, new { @class = "form-control", type = "text", id = "NumeroContrato", placeholder = "Numero Contrato." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.NumeroContrato, "", new { @class = "text-danger" })
                 </div>
             </div>
             <div class="col-xs-4 col-sm-4 col-md-4">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.TelefoneDoPlano)
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.TelefoneDoPlano, new { @class = "form-control", type = "text", id = "TelefoneDoPlano", placeholder = "Telefone Do Plano." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.TelefoneDoPlano, "", new { @class = "text-danger" })
+                    @*@Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.TelefoneDoPlano)
+                        @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.TelefoneDoPlano, new { type="text", style="display:disable", @class = "form-control", id = "TelefoneDoPlano", placeholder = "Telefone Do Plano." })
+                        @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.TelefoneDoPlano, "", new { @class = "text-danger" })*@
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-6">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Status.Id)
-                    @Html.DropDownListFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Status.Id, new SelectList((System.Collections.IEnumerable)Model.LisStatusMOD, "[nome da propriedade do objeto que sera o value do comboBox]", "[nome da propriedade do objeto que sera o texto do comboBox]"), "Selecione", new { @class = "form-control", id = "IdStatus", size = "1", @*selected = ""*@})
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Status.Id, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.StatusId, "Status")
+                    @Html.DropDownListFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.StatusId, new SelectList((System.Collections.IEnumerable)Model.LisStatusMOD, "Id", "Status"), "Selecione", new { @class = "form-control", id = "Status", size = "1", @*selected = ""*@})
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.StatusId, "", new { @class = "text-danger" })
                 </div>
             </div>
             <div class="col-xs-3 col-sm-3 col-md-3">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.ValorDeEntrada)
-                    @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.ValorDeEntrada, new { @class = "form-control", type = "text", id = "ValorDeEntrada", placeholder = "Telefone Do Plano." })
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.ValorDeEntrada, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.ValorDeEntrada)
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.ValorDeEntrada, new { @class = "form-control", type = "text", id = "ValorDeEntrada", placeholder = "Telefone Do Plano." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.ValorDeEntrada, "", new { @class = "text-danger" })
                 </div>
             </div>
             <div class="col-xs-3 col-sm-3 col-md-3">
                 <div class="form-group">
-                    @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.NumeroDeParcelas)
-                    @Html.DropDownListFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.NumeroDeParcelas, new SelectList((System.Collections.IEnumerable)Model.LisNumeroDeParcelas, "[nome da propriedade do objeto que sera o value do comboBox]", "[nome da propriedade do objeto que sera o texto do comboBox]"), "Selecione", new { @class = "form-control", id = "NumeroDeParcelas", size = "1", @*selected = ""*@})
-                    @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.NumeroDeParcelas, "", new { @class = "text-danger" })
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.NumeroDeParcelas)
+                    @Html.DropDownListFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.NumeroDeParcelas,
+                         new SelectList(new[] { new { value = "1", text = "1x" }, new { value = "2", text = "2x" }, new { value = "3", text = "3x" },
+                        new { value = "4", text = "4x" }, new { value = "5", text = "5x" }, new { value = "6", text = "6x" },
+                        new { value = "7", text = "7x" }, new { value = "8", text = "8x" }, new { value = "9", text = "9x" },
+                        new { value = "10", text = "10x" }, new { value = "11", text = "11x" }, new { value = "12", text = "12x" },
+                         }, "value", "text"), "Selecione", new { @class = "form-control", id = "NumeroDeParcelas", size = "1" })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.NumeroDeParcelas, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
@@ -282,7 +292,7 @@
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <button class="btn btn-default" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="form-dependente-1 multiCollapseExample2"> Adicionar dependente </button>
+                <button id="adicionarDependente" class="btn btn-default" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="form-dependente-1 multiCollapseExample2"> Adicionar dependente </button>
             </div>
         </div>
         <div class="collapse multi-collapse" id="form-dependente-1">
@@ -295,69 +305,70 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].Nome)
-                        @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].Nome, new { @class = "form-control", type = "text", id = "Nome", placeholder = "Nome." })
-                        @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].Nome, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].Id)
+                        @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].Nome)
+                        @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].Nome, new { @class = "form-control", type = "text", id = "NomeDependente", placeholder = "Nome." })
+                        @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].Nome, "", new { @class = "text-danger" })
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-4 col-sm-4 col-md-4">
                     <div class="form-group">
-                        @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].CPF)
-                        @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].CPF, new { @class = "form-control", type = "text", id = "CPF", placeholder = "CPF." })
-                        @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].CPF, "", new { @class = "text-danger" })
+                        @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].CPF)
+                        @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].CPF, new { @class = "form-control", type = "text", id = "CPFDependente", placeholder = "CPF." })
+                        @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].CPF, "", new { @class = "text-danger" })
                     </div>
                 </div>
                 <div class="col-xs-4 col-sm-4 col-md-4">
                     <div class="form-group">
-                        @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].RG)
-                        @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].RG, new { @class = "form-control", type = "text", id = "RG", placeholder = "RG." })
-                        @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].RG, "", new { @class = "text-danger" })
+                        @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].RG)
+                        @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].RG, new { @class = "form-control", type = "text", id = "RGDependente", placeholder = "RG." })
+                        @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].RG, "", new { @class = "text-danger" })
                     </div>
                 </div>
 
                 <div class="col-xs-2 col-sm-2 col-md-2">
                     <div class="form-group">
-                        @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].DataDeNascimento)
-                        @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].DataDeNascimento, new { @class = "form-control", type = "text", id = "DataDeNascimento", placeholder = "Data De Nascimento." })
-                        @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].DataDeNascimento, "", new { @class = "text-danger" })
+                        @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].DataDeNascimento)
+                        @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].DataDeNascimento, new { @class = "form-control", type = "text", id = "DataDeNascimentoDependente", placeholder = "Data De Nascimento." })
+                        @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].DataDeNascimento, "", new { @class = "text-danger" })
                     </div>
                 </div>
                 <div class="col-xs-2 col-sm-2 col-md-2">
                     <div class="form-group">
-                        @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].GrauDeParentesco)
-                        @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].GrauDeParentesco, new { @class = "form-control", type = "text", id = "GrauDeParentesco", placeholder = "Grau De Parentesco." })
-                        @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].GrauDeParentesco, "", new { @class = "text-danger" })
+                        @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].GrauDeParentesco)
+                        @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].GrauDeParentesco, new { @class = "form-control", type = "text", id = "GrauDeParentescoDependente", placeholder = "Grau De Parentesco." })
+                        @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].GrauDeParentesco, "", new { @class = "text-danger" })
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].NomeDaMae)
-                        @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].NomeDaMae, new { @class = "form-control", type = "text", id = "NomeDaMae", placeholder = "Nome Da Mae." })
-                        @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].NomeDaMae, "", new { @class = "text-danger" })
+                        @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].NomeDaMae)
+                        @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].NomeDaMae, new { @class = "form-control", type = "text", id = "NomeDaMaeDependente", placeholder = "Nome Da Mae." })
+                        @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].NomeDaMae, "", new { @class = "text-danger" })
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-4 col-sm-4 col-md-4">
                     <div class="form-group">
-                        @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].EstadoCivil)
-                        @Html.DropDownListFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].EstadoCivil, new SelectList
-                        (new[] { new { value = "casado", text = "Casado" }, new { value = "solteiro", text = "Solteiro" } }, "value", "text"),
-                        "Selecione", new { @class = "form-control", id = "EstadoCivilDependente", size = "1", @*selected = ""*@})
-                        @Html.DropDownListFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].EstadoCivil, new SelectList((System.Collections.IEnumerable)Model.LisEstadoCivil, "[nome da propriedade do objeto que sera o value do comboBox]", "[nome da propriedade do objeto que sera o texto do comboBox]"), "Selecione", new { @class = "form-control", id = "EstadoCivil", size = "1", @*selected = ""*@})
-                        @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].EstadoCivil, "", new { @class = "text-danger" })
+                        @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].EstadoCivil)
+                        @Html.DropDownListFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].EstadoCivil, new SelectList
+                             (new[] { new { value = "casado", text = "Casado" }, new { value = "solteiro", text = "Solteiro" } }, "value", "text"),
+                             /**/
+                             "Selecione", new { @class = "form-control", id = "EstadoCivilDependente", size = "1", @*selected = ""*@})
+                        @*@Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].EstadoCivil, "", new { @class = "text-danger" })*@
                     </div>
                 </div>
 
                 <div class="col-xs-8 col-sm-8 col-md-8">
                     <div class="form-group">
-                        @Html.LabelFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].NumeroDoSUS)
-                        @Html.TextBoxFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].NumeroDoSUS, new { @class = "form-control", type = "text", id = "NumeroDoSUS", placeholder = "Numero Do SUS." })
-                        @Html.ValidationMessageFor(alterarPessoaFisicaVM => alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].NumeroDoSUS, "", new { @class = "text-danger" })
+                        @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].NumeroDoSUS)
+                        @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].NumeroDoSUS, new { @class = "form-control", type = "text", id = "NumeroDoSUSDependente", placeholder = "Numero Do SUS." })
+                        @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.LisDependentePessoaFisicaMOD[0].NumeroDoSUS, "", new { @class = "text-danger" })
                     </div>
                 </div>
             </div>
@@ -365,8 +376,7 @@
 
         <div id="actions" class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <button type="button" class="btn btn-default" id="btnAlterar">Alterar</button>
-                <button type="button" class="btn btn-default" id="btnExcluir">Excluir</button>
+                <input type="submit" id="submitCadastrarPessoaFisica" class="btn btn-default" value="Alterar" />
             </div>
         </div>
     }

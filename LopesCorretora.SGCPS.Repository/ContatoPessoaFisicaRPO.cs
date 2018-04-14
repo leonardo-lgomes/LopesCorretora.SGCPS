@@ -25,6 +25,27 @@ namespace LopesCorretora.SGCPS.Repository
             }
         }
 
+        public static void Alterar(List<ContatoPessoaFisicaMOD> ListContatoPessoaFisicaMOD)
+        {
+            try
+            {
+                using (SGCPSContext context = new SGCPSContext())
+                {
+                    foreach (var item in ListContatoPessoaFisicaMOD)
+                    {
+                        ContatoPessoaFisicaMOD ObjContato = context.ContatosPessoasFisicas.Where(x => x.Id == item.Id).First();
+                        ObjContato.Contato = item.Contato;
+                        context.ContatosPessoasFisicas.Update(ObjContato);
+                        context.SaveChanges();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public static void Cadastrar(ContatoPessoaFisicaMOD contatoPessoaFisicaMOD)
         {
             try
@@ -53,6 +74,29 @@ namespace LopesCorretora.SGCPS.Repository
             catch (Exception)
             {
 
+                throw;
+            }
+        }
+
+        public static List<ContatoPessoaFisicaMOD> Listar(int id)
+        {
+            try
+            {
+                IEnumerable<ContatoPessoaFisicaMOD> lista;
+                List<ContatoPessoaFisicaMOD> Contatos = new List<ContatoPessoaFisicaMOD>();
+                using (SGCPSContext context = new SGCPSContext())
+                {
+                    lista = context.ContatosPessoasFisicas.Where(x => x.PessoaFisicaId == id);
+
+                    foreach (var item in lista)
+                    {
+                        Contatos.Add(item);
+                    }
+                }
+                return Contatos;
+            }
+            catch (Exception)
+            {
                 throw;
             }
         }

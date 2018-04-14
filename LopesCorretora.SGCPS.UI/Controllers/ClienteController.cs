@@ -48,5 +48,24 @@ namespace LopesCorretora.SGCPS.UI.Controllers
             }
             return View(pesquisaClienteVM);
         }
+
+        [HttpGet]
+        public RedirectToActionResult Redirecionar(int Id, string Tipo)
+        {
+            if (Tipo.Equals("PessoaJuridica"))
+            {
+                return RedirectToAction("Alterar", "PessoaJuridica", new { Id = Id });
+            }
+            else
+            {
+                return RedirectToAction("Alterar", "PessoaFisica", new { Id = Id });
+            }
+        }
+
+        [HttpGet]
+        public IActionResult Cadastro()
+        {
+            return View();
+        }
     }
 }

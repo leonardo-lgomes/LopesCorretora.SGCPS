@@ -25,6 +25,35 @@ namespace LopesCorretora.SGCPS.Repository
             }
         }
 
+        public static void Alterar(List<DependentePessoaFisicaMOD> ListDependentePessoaFisicaMOD)
+        {
+            try
+            {
+                using (SGCPSContext context = new SGCPSContext())
+                {
+                    foreach (var item in ListDependentePessoaFisicaMOD)
+                    {
+                        DependentePessoaFisicaMOD ObjDependente = context.DependentesPessoasFisicas.Where(x => x.Id == item.Id).First();
+                        ObjDependente.CPF = item.CPF;
+                        ObjDependente.DataDeNascimento = item.DataDeNascimento;
+                        ObjDependente.EstadoCivil = item.EstadoCivil;
+                        ObjDependente.GrauDeParentesco = item.GrauDeParentesco;
+                        ObjDependente.Nome = item.Nome;
+                        ObjDependente.NomeDaMae = item.NomeDaMae;
+                        ObjDependente.NumeroDoSUS = item.NumeroDoSUS;
+                        ObjDependente.RG = item.RG;
+
+                        context.DependentesPessoasFisicas.Update(ObjDependente);
+                        context.SaveChanges();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public static void Cadastrar(DependentePessoaFisicaMOD dependentePessoaFisicaMOD)
         {
             try
@@ -53,6 +82,28 @@ namespace LopesCorretora.SGCPS.Repository
             catch (Exception)
             {
 
+                throw;
+            }
+        }
+
+        public static List<DependentePessoaFisicaMOD> Listar(int id)
+        {
+            try
+            {
+                IEnumerable<DependentePessoaFisicaMOD> lista;
+                List<DependentePessoaFisicaMOD> Dependentes = new List<DependentePessoaFisicaMOD>();
+                using (SGCPSContext context = new SGCPSContext())
+                {
+                    lista = context.DependentesPessoasFisicas.Where(x => x.PessoaFisicaId == id);
+                    foreach (var item in lista)
+                    {
+                        Dependentes.Add(item);
+                    }
+                }
+                return Dependentes;
+            }
+            catch (Exception e)
+            {
                 throw;
             }
         }

@@ -26,6 +26,5 @@ namespace LopesCorretora.SGCPS.Models
         [Display(Name = "Plano", Description = "Nome do Plano")]
         #endregion
         public string Plano { get; set; }
-
     }
 }

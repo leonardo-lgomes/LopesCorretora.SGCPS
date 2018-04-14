@@ -23,7 +23,7 @@ namespace LopesCorretora.SGCPS.Business
                     LisStatusMOD = StatusRPO.Listar(),
                 };
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return null;
             }
@@ -33,7 +33,6 @@ namespace LopesCorretora.SGCPS.Business
         {
             try
             {
-                //PopularObjetos(cadastrarPessoaFisicaVM);
                 CadastrarPessoaFisica(cadastrarPessoaFisicaVM);
                 CadastrarContatoPessoaFisica(cadastrarPessoaFisicaVM);
                 CadastrarDependentePessoaFisica(cadastrarPessoaFisicaVM);
@@ -52,7 +51,7 @@ namespace LopesCorretora.SGCPS.Business
                 {
                     if (!contato.Contato.ToString().Trim().Equals(""))
                     {
-                        contato.PessoaFisica = cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD;
+                        contato.PessoaFisicaId = cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Id;
                         ContatoPessoaFisicaRPO.Cadastrar(contato);
                     }
                 }
@@ -65,7 +64,7 @@ namespace LopesCorretora.SGCPS.Business
             {
                 if (dependente != null && cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD != null)
                 {
-                    dependente.PessoaFisica = cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD;
+                    dependente.PessoaFisicaId = cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Id;
                     DependentePessoaFisicaRPO.Cadastrar(dependente);
                 }
             }
@@ -79,12 +78,22 @@ namespace LopesCorretora.SGCPS.Business
             }
         }
 
-        public static CadastrarPessoaFisicaVM PopularObjetos(CadastrarPessoaFisicaVM cadastrarPessoaFisicaVM)
+        public static CadastrarPessoaFisicaVM PopularVM(PessoaFisicaMOD pessoaFisicaMOD)
         {
-            cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano = 
-                PlanoRPO.Consultar(cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.Id);
-
-            return null;
+            try
+            {
+                return new CadastrarPessoaFisicaVM()
+                {
+                    ObjPessoaFisicaMOD = pessoaFisicaMOD,
+                    LisPlanosMOD = PlanoRPO.Listar(),
+                    LisSexo = SexoRPO.Listar(),
+                    LisStatusMOD = StatusRPO.Listar(),
+                };
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
         }
         #endregion
 
@@ -95,16 +104,16 @@ namespace LopesCorretora.SGCPS.Business
             {
                 AlterarPessoaFisicaVM alterarPessoaFisicaVM = new AlterarPessoaFisicaVM()
                 {
-                    //ObjPessoaFisicaMOD = PessoaFisicaRPO.Consultar(id),
+                    ObjPessoaFisicaMOD = PessoaFisicaRPO.Consultar(id),
+                    LisDependentePessoaFisicaMOD = DependentePessoaFisicaRPO.Listar(id),
+                    LisContatoPessoaFisicaMOD = ContatoPessoaFisicaRPO.Listar(id),
                     LisPlanosMOD = PlanoRPO.Listar(),
                     LisSexo = SexoRPO.Listar(),
-                    LisStatusMOD = new List<StatusMOD>(),
-                    LisNumeroDeParcelas = new List<string>(),
-                    LisEstadoCivil = new List<string>(),
+                    LisStatusMOD = StatusRPO.Listar(),
                 };
                 return alterarPessoaFisicaVM;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return null;
             }
@@ -112,8 +121,35 @@ namespace LopesCorretora.SGCPS.Business
 
         public static void ActionAlterarPessoaFisica(AlterarPessoaFisicaVM alterarPessoaFisicaVM)
         {
-            PessoaFisicaRPO.Alterar(alterarPessoaFisicaVM.ObjPessoaFisicaMOD);
+            if (DefinirPessoaFisicaId(alterarPessoaFisicaVM))
+            {
+                PessoaFisicaRPO.Alterar(alterarPessoaFisicaVM.ObjPessoaFisicaMOD);
+                ContatoPessoaFisicaRPO.Alterar(alterarPessoaFisicaVM.LisContatoPessoaFisicaMOD);
+                DependentePessoaFisicaRPO.Alterar(alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD);
+            }
         }
+
+        public static bool DefinirPessoaFisicaId(AlterarPessoaFisicaVM alterarPessoaFisicaVM)
+        {
+            try
+            {
+                foreach (var item in alterarPessoaFisicaVM.LisDependentePessoaFisicaMOD)
+                {
+                    item.PessoaFisicaId = alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Id;
+                }
+
+                foreach (var item in alterarPessoaFisicaVM.LisContatoPessoaFisicaMOD)
+                {
+                    item.PessoaFisicaId = alterarPessoaFisicaVM.ObjPessoaFisicaMOD.Id;
+                }
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         #endregion
     }
 }

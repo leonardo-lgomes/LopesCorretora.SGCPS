@@ -1,27 +1,79 @@
+@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style type="text/css">
+
+    /*troca de cores */
+
+    body > nav {
+        background-color: #103168 !important;
+        border-color: #aeaeae !important;
+    }
+
+    .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+        color: #d2d4d6 !important;
+    }
+
+
+    body > div > div > div > h1 {
+        color: #103168;
+        text-align: center;
+    }
+
+    /*fim troca de cores*/
+
+    body {
+        background-image: url("https://d26uhratvi024l.cloudfront.net/gsc/29P5RS/26/53/57/2653570371de4812b6ab5c3a2797e1e4/images/home/u1.jpg?token=5f1f89a36e1432ebe56d4485d5719612");
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    #BtnGoogle {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        height: 45px;
+        width: 175px;
+    }
+
+    .emptySpace {
+        height: 310px;
+    }
+
+    #linha {
+        width: 350px;
+    }
+</style>
+
+
 <div class="container">
-	<div class="row">
-    	<div class="col-xs-12 col-sm-12 col-md-12">
-    		<div class = "emptySpace"></div>
-		</div>
-	</div>
 
-  	<div class="row">
-    	<div class="col-xs-12 col-sm-12 col-md-12">
-			<h1> Acessar Sistema </h1>
-		</div>
-	</div>
-
-	<div class="row">
-    	<div class="col-xs-12 col-sm-12 col-md-12">
-			<hr id= "linha"></hr>
-		</div>
-	</div>
-
-	<div class="row">
-    	<div class="col-xs-12 col-sm-12 col-md-12">
-			<button type="button" class="btn btn-default" id="BtnGoogle">Google</button>
-		</div>
-	</div>
-</div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="emptySpace"></div>
+        </div>
+    </div>
 
 
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <h1> Acessar Sistema </h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <hr id="linha"></hr>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <button type="button" class="btn btn-default" id="BtnGoogle">Google</button>
+        </div>
+    </div>

@@ -19,8 +19,8 @@ namespace LopesCorretora.SGCPS.Business
                     ObjUsuarioMOD = new UsuarioMOD(),
                     ObjPessoaJuridicaMOD = new PessoaJuridicaMOD(),
                     ObjPlanoPessoaJuridicaMOD = new PlanoPessoaJuridicaMOD(),
-                    LisPlanoMOD = new List<PlanoMOD>(),
-                    LisNumeroDeParcelas = new List<int>(),
+                    LisPlanoMOD = PlanoRPO.Listar(),
+                    ListStatusMOD = StatusRPO.Listar()
                 };
             }
             catch (Exception)
@@ -38,8 +38,8 @@ namespace LopesCorretora.SGCPS.Business
                     ObjUsuarioMOD = cadastrarPessoaJuridicaVM.ObjUsuarioMOD,
                     ObjPessoaJuridicaMOD = cadastrarPessoaJuridicaVM.ObjPessoaJuridicaMOD,
                     ObjPlanoPessoaJuridicaMOD = cadastrarPessoaJuridicaVM.ObjPlanoPessoaJuridicaMOD,
-                    LisPlanoMOD = new List<PlanoMOD>(),
-                    LisNumeroDeParcelas = new List<int>(),
+                    LisPlanoMOD = PlanoRPO.Listar(),
+                    ListStatusMOD = StatusRPO.Listar()
                 };
             }
             catch (Exception)

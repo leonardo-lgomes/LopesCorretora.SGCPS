@@ -64,11 +64,24 @@ namespace LopesCorretora.SGCPS.Models
             set { odontologia = Convert.ToBoolean(value); }
         }
 
+        #region DataAnnotations
+        [Required(ErrorMessage = "* Campo obrigatorio")]
+        [Display(Name = "Qual Odonto", Description = "Qual plano odontologico?")]
+        #endregion
         public string QualOdonto { get; set; }
+
+        [Required]
+        public int PlanoId { get; set; }
 
         public PlanoMOD Plano { get; set; }
 
+        [Required]
+        public int UsuarioId { get; set; }
+
         public UsuarioMOD Usuario { get; set; }
+
+        [Required]
+        public int PessoaJuridicaId { get; set; }
 
         public PessoaJuridicaMOD PessoaJuridica { get; set; }
 

@@ -22,6 +22,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
+                    @Html.HiddenFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Id)
                     @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Titular)
                     @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Titular, new { @class = "form-control", type = "text", id = "Titular", placeholder = "Titular." })
                     @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Titular, "", new { @class = "text-danger" })
@@ -58,7 +59,7 @@
             <div class="col-xs-2 col-sm-2 col-md-2">
                 <div class="form-group">
                     @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Sexo)
-                    @Html.DropDownListFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.SexoId, new SelectList((System.Collections.IEnumerable)Model.LisSexo, "StrSexo", "StrSexo"), "Selecione", new { @class = "form-control", id = "Sexo", size = "1", @*selected = ""*@})
+                    @Html.DropDownListFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.SexoId, new SelectList((System.Collections.IEnumerable)Model.LisSexo, "Id", "Descricao"), "Selecione", new { @class = "form-control", id = "Sexo", size = "1", @*selected = ""*@})
                     @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Sexo, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -229,9 +230,9 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     @* substiruir por dropdown e listar planos disponiveis *@
-                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.Plano)
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.PlanoId, "Plano")
                     @Html.DropDownListFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.PlanoId, new SelectList((System.Collections.IEnumerable)Model.LisPlanosMOD, "Id", "Plano"), "Selecione", new { onchange= "RetornarPlano()", @class = "form-control", id = "Plano", size = "1", @*selected = ""*@})
-                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.Id, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.PlanoId, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
@@ -245,18 +246,18 @@
             </div>
             <div class="col-xs-4 col-sm-4 col-md-4">
                 <div class="form-group">
-                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.TelefoneDoPlano)
-                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.TelefoneDoPlano, new { @class = "form-control", type = "text", id = "TelefoneDoPlano", placeholder = "Telefone Do Plano." })
-                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.TelefoneDoPlano, "", new { @class = "text-danger" })
+                    @*@Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.TelefoneDoPlano)
+                    @Html.TextBoxFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.TelefoneDoPlano, new { type="text", style="display:disable", @class = "form-control", id = "TelefoneDoPlano", placeholder = "Telefone Do Plano." })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.PlanoPessoaFisica.Plano.TelefoneDoPlano, "", new { @class = "text-danger" })*@
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-6">
                 <div class="form-group">
-                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Status.Id, "Status")
+                    @Html.LabelFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.StatusId, "Status")
                     @Html.DropDownListFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.StatusId, new SelectList((System.Collections.IEnumerable)Model.LisStatusMOD, "Id", "Status"), "Selecione", new { @class = "form-control", id = "Status", size = "1", @*selected = ""*@})
-                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.Status.Id, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(cadastrarPessoaFisicaVM => cadastrarPessoaFisicaVM.ObjPessoaFisicaMOD.StatusId, "", new { @class = "text-danger" })
                 </div>
             </div>
             <div class="col-xs-3 col-sm-3 col-md-3">

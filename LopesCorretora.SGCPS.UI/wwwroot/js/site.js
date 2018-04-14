@@ -2,7 +2,7 @@
 function RetornarPlano() {
     $.ajax({
         type: "GET",
-        url: 'RetornarPlano?Id=',
+        url: '/PessoaFisica/RetornaPlano?Id=' + $("#Plano").val(),
         success: function (data) {
             var parsed = JSON.parse(data);
             var arr = [];

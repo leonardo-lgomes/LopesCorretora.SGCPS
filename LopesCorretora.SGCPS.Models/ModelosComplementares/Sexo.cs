@@ -9,8 +9,8 @@ namespace LopesCorretora.SGCPS.Models.ModelosComplementares
     {
         [Key]
         [Required]
-        public int IdSexo { get; set; }
+        public int Id { get; set; }
 
-        public string StrSexo { get; set; }
+        public string Descricao { get; set; }
     }
 }
